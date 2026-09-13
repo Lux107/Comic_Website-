@@ -59,3 +59,26 @@ button {
         width: 100%;
         border-radius: 10px;
     }
+
+
+.coverContainer {
+    position: relative;
+    display: inline-block;
+}
+
+    .coverContainer img {
+        display: block;
+    }
+
+    .coverContainer span {
+        position: absolute;
+        top: 5px;
+        left: 5px;
+        background: #4F91BD;
+        color: white;
+        padding: 5px 8px;
+        border-radius: 5px;
+        font-size: 20px;
+        font-weight: bold;
+        z-index: 10;
+    }

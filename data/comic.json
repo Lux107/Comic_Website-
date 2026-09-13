@@ -1,7 +1,7 @@
 {
     "comic": {
         "id": 1,
-        "name": "Lux & Nadia",
+        "name": "Lux & Nadia y yo",
         "cover": "images/cover.png",
         "description": "a comic about us",
         "tags": [
@@ -16,7 +16,7 @@
     "volumes": [
         {
             "id": 1,
-            "title": "OG",
+            "title": "niooo",
             "total_chapters": 2,
             "cover": "images/volume1.png"
         },
@@ -25,6 +25,12 @@
             "title": "Bolivia Saga",
             "total_chapters": 1,
             "cover": "images/volume2.png"
+        },
+        {
+            "id": 3,
+            "title": "Cinnamon Roll",
+            "total_chapters": 1,
+            "cover": "images/volume3.png"
         }
     ],
 

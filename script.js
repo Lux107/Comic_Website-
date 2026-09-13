@@ -73,13 +73,19 @@ function loadVolumes() {
 
             volumeList.innerHTML = "";
 
-            data.volumes.forEach(volume => {
+            data.volumes.forEach(volume =>
+
+            {
 
                 // Create volume card
                 const volumeCard = document.createElement("div");
 
                 volumeCard.classList.add("volumeCard");
 
+                // Cover container
+                const coverContainer = document.createElement("div");
+
+                coverContainer.classList.add("coverContainer");
 
                 // Volume cover
                 const cover = document.createElement("img");
@@ -93,18 +99,17 @@ function loadVolumes() {
                 const title = document.createElement("h2");
 
                 title.textContent =
-                    "title" +
-                    volume.id +
-                    ": " +
+                   
                     volume.title;
 
+                // Chapter number
+                const chapterNumber = document.createElement("span");
 
-                // Chapter count
-                const total_chapters = document.createElement("p");
+                chapterNumber.textContent = volume.total_chapters;
 
-                total_chapters.textContent =
-                    volume.total_chapters +
-                    " total_chapters";
+                // Put number on cover
+                coverContainer.appendChild(cover);
+                coverContainer.appendChild(chapterNumber);
 
 
                 // Select button
@@ -124,11 +129,9 @@ function loadVolumes() {
 
 
                 // Add everything to card
-                volumeCard.appendChild(cover);
+                volumeCard.appendChild(coverContainer);
 
                 volumeCard.appendChild(title);
-
-                volumeCard.appendChild(total_chapters);
 
                 volumeCard.appendChild(button);
 
