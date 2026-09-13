@@ -3,9 +3,10 @@
 
 <head>
     <meta charset="UTF-8">
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Our Comic</title>
+    <title>Comic</title>
 
     <link rel="stylesheet" href="style.css">
 </head>
@@ -14,35 +15,41 @@
 
     <main>
 
+        <!-- Comic Cover -->
         <img id="comicCover" src="" alt="Comic Cover">
 
+
+        <!-- Comic Information -->
         <h1 id="comicName">Loading...</h1>
 
         <p id="comicDescription"></p>
 
+
+        <!-- Tags -->
         <div id="comicTags"></div>
 
+
+        <!-- Status -->
         <p>
             <strong>Status:</strong>
             <span id="comicStatus"></span>
         </p>
 
-        <p>
-            <strong>Chapters:</strong>
-            <span id="chapterCount"></span>
-        </p>
 
+        <!-- Last Updated -->
         <p>
             <strong>Last Updated:</strong>
             <span id="lastUpdated"></span>
         </p>
 
+
+        <!-- Navigation -->
         <button onclick="startReading()">
             Start Reading
         </button>
 
-        <button onclick="goToChapters()">
-            Chapters
+        <button onclick="goToVolumes()">
+            Volumes
         </button>
 
         <button onclick="goToAbout()">
@@ -50,6 +57,7 @@
         </button>
 
     </main>
+
 
     <script src="script.js"></script>
 

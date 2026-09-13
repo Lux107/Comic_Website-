@@ -1,34 +1,71 @@
 {
     "comic": {
-        "name": "Our Comic",
-        "cover": "images/cover.png",
-        "description": "Our little adventures together.",
-        "tags": [ "Romance", "Comedy", "AI Comic" ],
-        "chapters": 2,
+        "id": 1,
+        "name": "Lux & Nadia",
+        "cover": "images/cover.jpg",
+        "description": "a comic about us",
+        "tags": [
+            "Romance",
+            "Comedy",
+            "AI Comic"
+        ],
         "lastUpdated": "2026-09-12",
         "status": "Ongoing"
     },
 
+    "volumes": [
+        {
+            "id": 1,
+            "title": "OG",
+            "total_chapters": 2,
+            "cover": "images/volume1.png"
+        },
+        {
+            "id": 2,
+            "title": "Bolivia Saga",
+            "total_chapters": 1,
+            "cover": "images/volume2.png"
+        }
+    ],
+
     "chapters": [
         {
-            "number": 1,
-            "title": "Green Hell",
+            "id": 1,
+            "volume_id": 1,
+            "chapter_number": 1,
+            "title": "I am scaredâ€¦",
             "date": "2026-09-12",
+            "number_of_pages": 3,
             "pages": [
-                "images/chapter2/page1.jpeg",
-                "images/chapter2/page2.jpeg"
+                "images/volume1/chapter1/page1.jpg",
+                "images/volume1/chapter1/page2.jpg",
+                "images/volume1/chapter1/page2.jpg"
             ]
         },
-
-
         {
-            "number": 2,
-            "title": "I am scared…",
+            "id": 2,
+            "volume_id": 1,
+            "chapter_number": 2,
+            "title": "Train",
             "date": "2026-09-12",
+            "number_of_pages": 3,
             "pages": [
-                "images/chapter1/page1.png",
-                "images/chapter1/page2.png",
-                "images/chapter1/page3.png"
+                "images/volume1/chapter1/page1.jpg",
+                "images/volume1/chapter1/page2.jpg",
+                "images/volume1/chapter1/page2.jpg"
+            ]
+        },
+        {
+            "id": 6,
+            "volume_id": 2,
+            "chapter_number": 1,
+            "title": "Gambling time",
+            "date": "2026-09-13",
+            "number_of_pages": 3,
+            "pages": [
+                "images/volume1/chapter1/page1.jpg",
+                "images/volume1/chapter1/page2.jpg",
+                "images/volume1/chapter1/page2.jpg"
             ]
         }
     ]
