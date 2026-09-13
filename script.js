@@ -9,7 +9,7 @@ fetch("data/comic.json")
         comicData = data;
 
         // Comic name
-        document.getElementById("comicName").textContent =
+        document.getElementById("name").textContent =
             data.comic.name;
 
         // Comic cover
@@ -17,8 +17,12 @@ fetch("data/comic.json")
             data.comic.cover;
 
         // Description
-        document.getElementById("comicDescription").textContent =
+        document.getElementById("description").textContent =
             data.comic.description;
+
+        // Tags
+        const tagsContainer =
+            document.getElementById("comicTags");
 
         // Status
         document.getElementById("comicStatus").textContent =
@@ -27,10 +31,6 @@ fetch("data/comic.json")
         // Last updated
         document.getElementById("lastUpdated").textContent =
             data.comic.lastUpdated;
-
-        // Tags
-        const tagsContainer =
-            document.getElementById("comicTags");
 
 
         data.comic.tags.forEach(tag => {
