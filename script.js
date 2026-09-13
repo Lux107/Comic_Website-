@@ -8,21 +8,20 @@ fetch("data/comic.json")
 
         comicData = data;
 
+        // Comic cover
+        document.getElementById("Comic Cover").src =
+            data.comic.cover;
+
         // Comic name
         document.getElementById("name").textContent =
             data.comic.name;
 
-        // Comic cover
-        document.getElementById("cover").src =
-            data.comic.cover;
 
         // Description
         document.getElementById("description").textContent =
             data.comic.description;
 
-        // Tags
-        const tagsContainer =
-            document.getElementById("tags");
+   
 
         // Status
         document.getElementById("status").textContent =
@@ -31,6 +30,10 @@ fetch("data/comic.json")
         // Last updated
         document.getElementById("lastUpdated").textContent =
             data.comic.lastUpdated;
+
+        // Tags
+        const tagsContainer =
+            document.getElementById("comicTags");
 
 
         data.comic.tags.forEach(tag => {
@@ -83,7 +86,7 @@ function loadVolumes() {
 
                 cover.src = volume.cover;
 
-                cover.alt = "cover" + volume.id;
+                cover.alt = "cover " + volume.id;
 
 
                 // Volume title
@@ -101,13 +104,13 @@ function loadVolumes() {
 
                 chapterCount.textContent =
                     volume.total_chapters +
-                    "total_chapters";
+                    " total_chapters";
 
 
                 // Select button
                 const button = document.createElement("button");
 
-                button.textContent = "Select Volume";
+                button.textContent = " Select Volume";
 
 
                 // When clicked
