@@ -22,10 +22,10 @@ fetch("data/comic.json")
 
         // Tags
         const tagsContainer =
-            document.getElementById("comicTags");
+            document.getElementById("tags");
 
         // Status
-        document.getElementById("comicStatus").textContent =
+        document.getElementById("status").textContent =
             data.comic.status;
 
         // Last updated
