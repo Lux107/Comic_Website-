@@ -50,29 +50,6 @@ fetch("data/comic.json")
 
 
 
-// Start reading
-function startReading() {
-
-    window.location.href = "reader.html";
-
-}
-
-
-
-// Go to volume selector
-function goToVolumes() {
-    console.log("✅ goToVolumes() worked!");
-    window.location.href = "volumes.html";
-
-}
-
-
-
-// Go to About
-function goToAbout() {
-
-    window.location.href = "about.html";
-
 }
 
 // ==========================
@@ -106,14 +83,14 @@ function loadVolumes() {
 
                 cover.src = volume.cover;
 
-                cover.alt = "Volume " + volume.id;
+                cover.alt = "cover" + volume.id;
 
 
                 // Volume title
                 const title = document.createElement("h2");
 
                 title.textContent =
-                    "Volume " +
+                    "title" +
                     volume.id +
                     ": " +
                     volume.title;
@@ -124,7 +101,7 @@ function loadVolumes() {
 
                 chapterCount.textContent =
                     volume.total_chapters +
-                    " chapters";
+                    "total_chapters";
 
 
                 // Select button
@@ -175,6 +152,33 @@ function loadVolumes() {
 }
 
 
+
+
+// Run the volume loader
+loadVolumes();
+
+
+// ==========================
+// Make buttons to travel to html
+// ==========================
+
+// Start reading
+function startReading() {
+
+    window.location.href = "reader.html";
+
+}
+
+
+
+// Go to volume selector
+function goToVolumes() {
+    console.log("✅ goToVolumes() worked!");
+    window.location.href = "volumes.html";
+
+}
+
+
 // Go back to Index
 function goToIndex() {
 
@@ -182,7 +186,7 @@ function goToIndex() {
 
 }
 
+// Go to About
+function goToAbout() {
 
-// Run the volume loader
-loadVolumes();
-
+    window.location.href = "about.html";
