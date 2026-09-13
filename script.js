@@ -1,4 +1,4 @@
-let comicData;
+﻿let comicData;
 
 
 // Load the comic database
@@ -73,7 +73,7 @@ function startReading() {
 
 // Go to volume selector
 function goToVolumes() {
-
+    console.log("✅ goToVolumes() worked!");
     window.location.href = "volumes.html";
 
 }
