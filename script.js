@@ -653,7 +653,145 @@ function goToChapters() {
 
 }
 
+// ==========================
+// NEXT CHAPTER
+// ==========================
 
+function nextChapter() {
+
+    if (!currentChapter) {
+        return;
+    }
+
+
+    // Load database
+    fetch("data/comic.json")
+
+        .then(response => response.json())
+
+        .then(data => {
+
+            // Find chapters from the same volume
+            const volumeChapters =
+                data.chapters.filter(
+                    chapter =>
+                        chapter.v_id == currentChapter.v_id
+                );
+
+
+            // Find current chapter's position
+            const currentIndex =
+                volumeChapters.findIndex(
+                    chapter =>
+                        chapter.chapter_id ==
+                        currentChapter.chapter_id
+                );
+
+
+            // Find next chapter
+            const nextChapter =
+                volumeChapters[currentIndex + 1];
+
+
+            // No next chapter
+            if (!nextChapter) {
+
+                const button =
+                    document.getElementById(
+                        "nextChapterButton"
+                    );
+
+
+                button.textContent =
+                    "No More Chapters";
+
+
+                button.disabled = true;
+
+
+                return;
+
+            }
+
+
+            // Go to next chapter
+            window.location.href =
+                "reader.html?chapter=" +
+                nextChapter.chapter_id;
+
+        });
+
+}
+
+// ==========================
+// PREVIOUS CHAPTER
+// ==========================
+
+function previousChapter() {
+
+    if (!currentChapter) {
+        return;
+    }
+
+
+    // Load database
+    fetch("data/comic.json")
+
+        .then(response => response.json())
+
+        .then(data => {
+
+            // Find chapters from the same volume
+            const volumeChapters =
+                data.chapters.filter(
+                    chapter =>
+                        chapter.v_id == currentChapter.v_id
+                );
+
+
+            // Find current chapter position
+            const currentIndex =
+                volumeChapters.findIndex(
+                    chapter =>
+                        chapter.chapter_id ==
+                        currentChapter.chapter_id
+                );
+
+
+            // Find previous chapter
+            const previousChapter =
+                volumeChapters[currentIndex - 1];
+
+
+            // No previous chapter
+            if (!previousChapter) {
+
+                const button =
+                    document.getElementById(
+                        "previousChapterButton"
+                    );
+
+
+                button.textContent =
+                    "No Previous Chapter";
+
+
+                button.disabled = true;
+
+
+                return;
+
+            }
+
+
+            // Go to previous chapter
+            window.location.href =
+                "reader.html?chapter=" +
+                previousChapter.chapter_id;
+
+        });
+
+}
 
 // Run reader
 loadReader();
