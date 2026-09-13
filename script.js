@@ -1,5 +1,7 @@
 ﻿let comicData;
+let comicChapters = [];
 
+let chapterAscending = true;
 
 // Load the comic database
 fetch("data/comic.json")
@@ -159,10 +161,502 @@ function loadVolumes() {
 
 
 
+// ==========================
+// CHAPTER SELECTOR
+// ==========================
 
-// Run the volume loader
-loadVolumes();
 
+
+function loadChapters() {
+
+    const chapterList =
+        document.getElementById("chapterList");
+
+
+
+    // If we're not on chapters.html
+    if (!chapterList) {
+        return;
+    }
+
+
+    // Get volume ID from URL
+    const urlParams =
+        new URLSearchParams(window.location.search);
+
+
+    const volumeId =
+        urlParams.get("volume");
+
+
+    console.log("Selected volume:", volumeId);
+
+
+    // If no volume was selected
+    if (!volumeId) {
+
+        chapterList.textContent =
+            "No volume selected.";
+
+        return;
+
+    }
+
+
+    fetch("data/comic.json")
+
+        .then(response => response.json())
+
+        .then(data => {
+
+            // Find the selected volume
+            const volume =
+                data.volumes.find(
+                    volume => volume.id == volumeId
+                );
+
+
+            // If volume doesn't exist
+            if (!volume) {
+
+                chapterList.textContent =
+                    "Volume not found.";
+
+                return;
+
+            }
+
+
+            // Show volume cover
+            document.getElementById("volumeCover").src =
+                volume.cover;
+
+
+            // Show volume title
+            document.getElementById("volumeTitle").textContent =
+               
+                volume.title;
+
+
+            // Find chapters belonging to this volume
+            comicChapters =
+                data.chapters.filter(
+                    chapter => chapter.v_id == volumeId
+                );
+
+
+            // Show number of chapters
+            document.getElementById("chapterTotal").textContent =
+                comicChapters.length +
+                " chapters";
+
+
+            // Display chapters
+            displayChapters();
+
+        })
+
+        .catch(error => {
+
+            console.error(
+                "Error loading chapters:",
+                error
+            );
+
+            chapterList.textContent =
+                "Could not load chapters.";
+
+        });
+
+}
+
+
+// ==========================
+// SORT CHAPTERS
+// ==========================
+
+function sortChapters() {
+
+    chapterAscending =
+        !chapterAscending;
+
+
+    const sortButton =
+        document.getElementById("sortButton");
+
+
+    if (chapterAscending) {
+
+        sortButton.textContent =
+            "Chapter 1 → Last";
+
+    } else {
+
+        sortButton.textContent =
+            "Last → Chapter 1";
+
+    }
+
+
+    displayChapters();
+
+}
+
+
+// ==========================
+// DISPLAY CHAPTERS
+// ==========================
+
+function displayChapters() {
+
+    const chapterList =
+        document.getElementById("chapterList");
+
+
+    chapterList.innerHTML = "";
+
+
+    // Copy chapters
+    let chapters =
+        [...comicChapters];
+
+
+    // Sort by chapter number
+    chapters.sort(
+        (a, b) =>
+            Number(a.chapter_number) -
+            Number(b.chapter_number)
+    );
+
+
+    // Reverse if needed
+    if (!chapterAscending) {
+
+        chapters.reverse();
+
+    }
+
+
+    // Create each chapter
+    chapters.forEach(chapter => {
+
+        // Main card
+        const chapterCard =
+            document.createElement("div");
+
+        chapterCard.classList.add(
+            "chapterCard"
+        );
+
+
+        // Top row
+        const topRow =
+            document.createElement("div");
+
+        topRow.classList.add("chapterTopRow");
+
+
+        // Left side
+        const leftSide =
+            document.createElement("div");
+
+
+        // Chapter number
+        const number =
+            document.createElement("h2");
+
+        number.textContent =
+            "Chapter " +
+            chapter.chapter_number;
+
+
+        // Chapter title
+        const title =
+            document.createElement("h3");
+
+        title.textContent =
+            chapter.tittle;
+
+
+        // Date
+        const date =
+            document.createElement("p");
+
+        date.textContent =
+            chapter.date;
+
+
+        // Right side
+        const rightSide =
+            document.createElement("div");
+
+        rightSide.classList.add("chapterRightSide");
+
+
+        // Number of pages
+        const pages =
+            document.createElement("span");
+
+        pages.textContent =
+            chapter.number_of_pages +
+            " pages";
+
+
+        // Reader button
+        const button =
+            document.createElement("button");
+
+        button.textContent =
+            "Read Chapter";
+
+
+        button.onclick = function () {
+
+            window.location.href =
+                "reader.html?chapter=" +
+                chapter.chapter_id;
+
+        };
+
+
+        // Build left side
+        leftSide.appendChild(number);
+        leftSide.appendChild(title);
+        leftSide.appendChild(date);
+
+
+        // Build right side
+        rightSide.appendChild(pages);
+        rightSide.appendChild(button);
+
+
+        // Build card
+        topRow.appendChild(leftSide);
+        topRow.appendChild(rightSide);
+
+        chapterCard.appendChild(topRow);
+
+
+        // Add card
+        chapterList.appendChild(chapterCard);
+
+    });
+
+}
+
+// ==========================
+// COMIC READER
+// ==========================
+
+let currentChapter = null;
+
+let currentPage = 0;
+
+
+// Load reader
+function loadReader() {
+
+    const comicPage =
+        document.getElementById("comicPage");
+
+
+    // If we're not on reader.html
+    if (!comicPage) {
+        return;
+    }
+
+
+    // Get chapter ID from URL
+    const urlParams =
+        new URLSearchParams(window.location.search);
+
+
+    const chapterId =
+        urlParams.get("chapter");
+
+
+    // If no chapter was selected
+    if (!chapterId) {
+
+        document.getElementById("readerTitle").textContent =
+            "No chapter selected.";
+
+        return;
+
+    }
+
+
+    console.log(
+        "Selected chapter:",
+        chapterId
+    );
+
+
+    // Load database
+    fetch("data/comic.json")
+
+        .then(response => response.json())
+
+        .then(data => {
+
+            // Find chapter
+            currentChapter =
+                data.chapters.find(
+                    chapter =>
+                        chapter.chapter_id == chapterId
+                );
+
+
+            // Chapter doesn't exist
+            if (!currentChapter) {
+
+                document.getElementById("readerTitle").textContent =
+                    "Chapter not found.";
+
+                return;
+
+            }
+
+
+            // Show chapter title
+            document.getElementById("readerTitle").textContent =
+                "Chapter " +
+                currentChapter.chapter_number +
+                ": " +
+                currentChapter.tittle;
+
+
+            // Start at page 1
+            currentPage = 0;
+
+
+            // Show page
+            showPage();
+
+        })
+
+        .catch(error => {
+
+            console.error(
+                "Error loading reader:",
+                error
+            );
+
+        });
+
+}
+
+
+
+// ==========================
+// SHOW CURRENT PAGE
+// ==========================
+
+function showPage() {
+
+    const comicPage =
+        document.getElementById("comicPage");
+
+
+    const pageNumber =
+        document.getElementById("pageNumber");
+
+
+    // Get current image
+    const image =
+        currentChapter.pages[currentPage];
+
+
+    // Show image
+    comicPage.src = image;
+
+
+    // Show page number
+    pageNumber.textContent =
+        "Page " +
+        (currentPage + 1) +
+        " / " +
+        currentChapter.pages.length;
+
+}
+
+
+
+// ==========================
+// NEXT PAGE
+// ==========================
+
+function nextPage() {
+
+    if (!currentChapter) {
+        return;
+    }
+
+
+    if (
+        currentPage <
+        currentChapter.pages.length - 1
+    ) {
+
+        currentPage++;
+
+        showPage();
+
+    }
+
+}
+
+
+
+// ==========================
+// PREVIOUS PAGE
+// ==========================
+
+function previousPage() {
+
+    if (!currentChapter) {
+        return;
+    }
+
+
+    if (currentPage > 0) {
+
+        currentPage--;
+
+        showPage();
+
+    }
+
+}
+
+
+
+// ==========================
+// BACK TO CHAPTERS
+// ==========================
+
+function goToChapters() {
+
+    if (!currentChapter) {
+
+        window.location.href =
+            "chapters.html";
+
+        return;
+
+    }
+
+
+    window.location.href =
+        "chapters.html?volume=" +
+        currentChapter.v_id;
+
+}
+
+
+
+// Run reader
+loadReader();
 
 // ==========================
 // Make buttons to travel to html
@@ -197,3 +691,8 @@ function goToAbout() {
 
     window.location.href = "about.html";
 }
+
+
+// Run the volume loader
+loadVolumes();
+loadChapters();

@@ -1,10 +1,79 @@
 ﻿<!DOCTYPE html>
-<html>
+<html lang="en">
+
 <head>
-    <title>Chapter selecter</title>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Chapters</title>
+
+    <link rel="stylesheet" href="style.css">
+
 </head>
 
+
 <body>
-    <h1>Chapter selecter</h1>
+
+    <main>
+
+        <!-- Volume information -->
+
+        <div id="volumeHeader">
+
+            <img id="volumeCover" src="" alt="Volume Cover">
+
+            <div>
+
+                <h1 id="volumeTitle">
+                    Loading...
+                </h1>
+
+                <p id="chapterTotal">
+                    Loading...
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <!-- Sorting -->
+
+        <button id="sortButton" onclick="sortChapters()">
+            Chapter 1 → Last
+        </button>
+
+
+        <!-- Chapter list -->
+
+        <div id="chapterList">
+
+            Loading chapters...
+
+        </div>
+
+
+        <br>
+
+
+        <!-- Navigation -->
+
+        <button onclick="goToVolumes()">
+            Back to Volumes
+        </button>
+
+        <button onclick="goToIndex()">
+            Back to menu
+        </button>
+
+
+    </main>
+
+
+    <script src="script.js"></script>
+
 </body>
+
 </html>

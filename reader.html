@@ -1,10 +1,65 @@
 ﻿<!DOCTYPE html>
-<html>
+<html lang="en">
+
 <head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>Reader</title>
+
+    <link rel="stylesheet" href="style.css">
+
 </head>
 
+
 <body>
-    <h1>Reader</h1>
+
+    <main>
+
+        <h1 id="readerTitle">
+            Loading...
+        </h1>
+
+
+        <p id="pageNumber">
+            Loading...
+        </p>
+
+
+        <div id="reader">
+
+            <img id="comicPage" src="" alt="Comic Page">
+
+        </div>
+
+
+        <div>
+
+            <button onclick="previousPage()">
+                Previous
+            </button>
+
+            <button onclick="nextPage()">
+                Next
+            </button>
+
+        </div>
+
+
+        <br>
+
+
+        <button onclick="goToChapters()">
+            Back to Chapters
+        </button>
+
+    </main>
+
+
+    <script src="script.js"></script>
+
 </body>
+
 </html>

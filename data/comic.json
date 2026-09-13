@@ -1,7 +1,7 @@
 {
     "comic": {
         "id": 1,
-        "name": "Lux & Nadia y yo",
+        "name": "Lux & Nadia",
         "cover": "images/cover.png",
         "description": "a comic about us",
         "tags": [
@@ -16,7 +16,7 @@
     "volumes": [
         {
             "id": 1,
-            "title": "niooo",
+            "title": "Original",
             "total_chapters": 2,
             "cover": "images/volume1.png"
         },
@@ -25,53 +25,99 @@
             "title": "Bolivia Saga",
             "total_chapters": 1,
             "cover": "images/volume2.png"
-        },
-        {
-            "id": 3,
-            "title": "Cinnamon Roll",
-            "total_chapters": 1,
-            "cover": "images/volume3.png"
         }
+        
     ],
 
     "chapters": [
         {
-            "id": 1,
-            "volume_id": 1,
-            "chapter_number": 1,
-            "title": "I am scared…",
+            "chapter_id": "1",
+            "v_id": "1",
+            "chapter_number": "1",
+            "tittle": "I am scared…",
             "date": "2026-09-12",
-            "number_of_pages": 3,
+            "number_of_pages": "3",
             "pages": [
-                "images/volume1/chapter1/page1.jpg",
-                "images/volume1/chapter1/page2.jpg",
-                "images/volume1/chapter1/page2.jpg"
+                "images/volume1/chapter1/page1.png",
+                "images/volume1/chapter1/page2.png"
             ]
         },
         {
-            "id": 2,
-            "volume_id": 1,
-            "chapter_number": 2,
-            "title": "Train",
+            "chapter_id": "2",
+            "v_id": "1",
+            "chapter_number": "2",
+            "tittle": "Train",
             "date": "2026-09-12",
-            "number_of_pages": 3,
+            "number_of_pages": "3",
             "pages": [
-                "images/volume1/chapter1/page1.jpg",
-                "images/volume1/chapter1/page2.jpg",
-                "images/volume1/chapter1/page2.jpg"
+                "images/volume1/chapter1/page1.png",
+                "images/volume1/chapter1/page2.png",
+                "images/volume1/chapter1/page3.png"
             ]
         },
         {
-            "id": 6,
-            "volume_id": 2,
-            "chapter_number": 1,
-            "title": "Gambling time",
+            "chapter_id": "3",
+            "v_id": "1",
+            "chapter_number": "3",
+            "tittle": "Water",
             "date": "2026-09-13",
-            "number_of_pages": 3,
+            "number_of_pages": "3",
             "pages": [
-                "images/volume1/chapter1/page1.jpg",
-                "images/volume1/chapter1/page2.jpg",
-                "images/volume1/chapter1/page2.jpg"
+                "images/volume1/chapter1/page1.png",
+                "images/volume1/chapter1/page2.png",
+                "images/volume1/chapter1/page3.png"
+            ]
+        },
+        {
+            "chapter_id": "6",
+            "v_id": "2",
+            "chapter_number": "1",
+            "tittle": "Gambling time",
+            "date": "2026-09-13",
+            "number_of_pages": "3",
+            "pages": [
+                "images/volume1/chapter1/page1.png",
+                "images/volume1/chapter1/page2.png",
+                "images/volume1/chapter1/page3.png"
+            ]
+        },
+        {
+            "chapter_id": "7",
+            "v_id": "2",
+            "chapter_number": "2",
+            "tittle": "test ",
+            "date": "2026-09-14",
+            "number_of_pages": "1",
+            "pages": [
+                "images/volume1/chapter1/page1.png",
+                "images/volume1/chapter1/page2.png",
+                "images/volume1/chapter1/page3.png"
+            ]
+        },
+        {
+            "chapter_id": "8",
+            "v_id": "2",
+            "chapter_number": "3",
+            "tittle": "test ",
+            "date": "2026-09-15",
+            "number_of_pages": "2",
+            "pages": [
+                "images/volume1/chapter1/page1.png",
+                "images/volume1/chapter1/page2.png",
+                "images/volume1/chapter1/page3.png"
+            ]
+        },
+        {
+            "chapter_id": "9",
+            "v_id": "2",
+            "chapter_number": "4",
+            "tittle": "test ",
+            "date": "2026-09-16",
+            "number_of_pages": "0",
+            "pages": [
+                "images/volume1/chapter1/page1.png",
+                "images/volume1/chapter1/page2.png",
+                "images/volume1/chapter1/page3.png"
             ]
         }
     ]
