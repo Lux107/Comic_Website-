@@ -2,7 +2,7 @@
     "comic": {
         "id": 1,
         "name": "Lux & Nadia",
-        "cover": "images/cover.jpg",
+        "cover": "images/cover.png",
         "description": "a comic about us",
         "tags": [
             "Romance",
