@@ -9,22 +9,22 @@ fetch("data/comic.json")
         comicData = data;
 
         // Comic name
-        document.getElementById("comicName").textContent =
+        document.getElementById("name").textContent =
             data.comic.name;
 
 
         // Comic cover
-        document.getElementById("comicCover").src =
+        document.getElementById("cover").src =
             data.comic.cover;
 
 
         // Description
-        document.getElementById("comicDescription").textContent =
+        document.getElementById("description").textContent =
             data.comic.description;
 
 
         // Status
-        document.getElementById("comicStatus").textContent =
+        document.getElementById("status").textContent =
             data.comic.status;
 
 
@@ -35,7 +35,7 @@ fetch("data/comic.json")
 
         // Tags
         const tagsContainer =
-            document.getElementById("comicTags");
+            document.getElementById("tags");
 
 
         data.comic.tags.forEach(tag => {
@@ -132,7 +132,7 @@ function loadVolumes() {
 
 
                 // Chapter count
-                const chapterCount = document.createElement("p");
+                const total_chapters = document.createElement("p");
 
                 chapterCount.textContent =
                     volume.total_chapters +
@@ -160,7 +160,7 @@ function loadVolumes() {
 
                 volumeCard.appendChild(title);
 
-                volumeCard.appendChild(chapterCount);
+                volumeCard.appendChild(total_chapters);
 
                 volumeCard.appendChild(button);
 
