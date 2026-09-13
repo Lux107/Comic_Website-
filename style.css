@@ -1,0 +1,29 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    margin: 40px;
+}
+
+main {
+    max-width: 600px;
+    margin: auto;
+}
+
+#comicCover {
+    width: 300px;
+    max-width: 100%;
+}
+
+button {
+    padding: 10px 20px;
+    margin: 5px;
+    cursor: pointer;
+}
+
+#comicTags span {
+    display: inline-block;
+    margin: 5px;
+    padding: 5px 10px;
+    background: lightgray;
+    border-radius: 10px;
+}

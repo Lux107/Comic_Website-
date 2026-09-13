@@ -1,0 +1,35 @@
+{
+    "comic": {
+        "name": "Our Comic",
+        "cover": "images/cover.png",
+        "description": "Our little adventures together.",
+        "tags": [ "Romance", "Comedy", "AI Comic" ],
+        "chapters": 2,
+        "lastUpdated": "2026-09-12",
+        "status": "Ongoing"
+    },
+
+    "chapters": [
+        {
+            "number": 1,
+            "title": "Green Hell",
+            "date": "2026-09-12",
+            "pages": [
+                "images/chapter2/page1.jpeg",
+                "images/chapter2/page2.jpeg"
+            ]
+        },
+
+
+        {
+            "number": 2,
+            "title": "I am scared…",
+            "date": "2026-09-12",
+            "pages": [
+                "images/chapter1/page1.png",
+                "images/chapter1/page2.png",
+                "images/chapter1/page3.png"
+            ]
+        }
+    ]
+}

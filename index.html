@@ -1,0 +1,58 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Our Comic</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <main>
+
+        <img id="comicCover" src="" alt="Comic Cover">
+
+        <h1 id="comicName">Loading...</h1>
+
+        <p id="comicDescription"></p>
+
+        <div id="comicTags"></div>
+
+        <p>
+            <strong>Status:</strong>
+            <span id="comicStatus"></span>
+        </p>
+
+        <p>
+            <strong>Chapters:</strong>
+            <span id="chapterCount"></span>
+        </p>
+
+        <p>
+            <strong>Last Updated:</strong>
+            <span id="lastUpdated"></span>
+        </p>
+
+        <button onclick="startReading()">
+            Start Reading
+        </button>
+
+        <button onclick="goToChapters()">
+            Chapters
+        </button>
+
+        <button onclick="goToAbout()">
+            About
+        </button>
+
+    </main>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
