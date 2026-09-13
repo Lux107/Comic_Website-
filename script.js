@@ -9,7 +9,7 @@ fetch("data/comic.json")
         comicData = data;
 
         // Comic cover
-        document.getElementById("Comic Cover").src =
+        document.getElementById("cover").src =
             data.comic.cover;
 
         // Comic name
@@ -53,7 +53,7 @@ fetch("data/comic.json")
 
 
 
-}
+
 
 // ==========================
 // VOLUME SELECTOR
@@ -102,7 +102,7 @@ function loadVolumes() {
                 // Chapter count
                 const total_chapters = document.createElement("p");
 
-                chapterCount.textContent =
+                total_chapters.textContent =
                     volume.total_chapters +
                     " total_chapters";
 
@@ -193,3 +193,4 @@ function goToIndex() {
 function goToAbout() {
 
     window.location.href = "about.html";
+}
