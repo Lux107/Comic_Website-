@@ -17,13 +17,13 @@
         {
             "id": 1,
             "title": "Original",
-            "total_chapters": 2,
+            "total_chapters": 15,
             "cover": "images/volume1.png"
         },
         {
             "id": 2,
             "title": "Bolivia Saga",
-            "total_chapters": 1,
+            "total_chapters": 0,
             "cover": "images/volume2.png"
         }
         
