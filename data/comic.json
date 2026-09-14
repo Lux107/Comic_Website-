@@ -34,91 +34,136 @@
             "chapter_id": "1",
             "v_id": "1",
             "chapter_number": "1",
-            "tittle": "I am scared…",
-            "date": "2026-09-12",
-            "number_of_pages": "3",
-            "pages": [
-                "images/volume1/chapter1/page1.png",
-                "images/volume1/chapter1/page2.png"
-            ]
+            "tittle": "BETA",
+            "date": "2026-05-28",
+            "writer": "Lux",
+            "number_of_pages": "3"
         },
         {
             "chapter_id": "2",
             "v_id": "1",
             "chapter_number": "2",
-            "tittle": "Train",
-            "date": "2026-09-12",
-            "number_of_pages": "3",
-            "pages": [
-                "images/volume1/chapter1/page1.png",
-                "images/volume1/chapter1/page2.png",
-                "images/volume1/chapter1/page3.png"
-            ]
+            "tittle": "Playing Games",
+            "date": "2026-05-28",
+            "writer": "Lux",
+            "number_of_pages": "3"
         },
         {
             "chapter_id": "3",
             "v_id": "1",
             "chapter_number": "3",
-            "tittle": "Water",
-            "date": "2026-09-13",
-            "number_of_pages": "3",
-            "pages": [
-                "images/volume1/chapter1/page1.png",
-                "images/volume1/chapter1/page2.png",
-                "images/volume1/chapter1/page3.png"
-            ]
+            "tittle": "Rice incident ",
+            "date": "2026-05-29",
+            "writer": "Lux",
+            "number_of_pages": "3"
+        },
+        {
+            "chapter_id": "4",
+            "v_id": "1",
+            "chapter_number": "4",
+            "tittle": "1, 2, Switch",
+            "date": "2026-05-29",
+            "writer": "Lux",
+            "number_of_pages": "3"
+        },
+        {
+            "chapter_id": "5",
+            "v_id": "1",
+            "chapter_number": "5",
+            "tittle": "I am scared...",
+            "date": "2026-05-31",
+            "writer": "Lux",
+            "number_of_pages": "3"
         },
         {
             "chapter_id": "6",
-            "v_id": "2",
-            "chapter_number": "1",
-            "tittle": "Gambling time",
-            "date": "2026-09-13",
-            "number_of_pages": "3",
-            "pages": [
-                "images/volume1/chapter1/page1.png",
-                "images/volume1/chapter1/page2.png",
-                "images/volume1/chapter1/page3.png"
-            ]
+            "v_id": "1",
+            "chapter_number": "6",
+            "tittle": "Train or Car",
+            "date": "2026-06-01",
+            "writer": "Lux",
+            "number_of_pages": "3"
         },
         {
             "chapter_id": "7",
-            "v_id": "2",
-            "chapter_number": "2",
-            "tittle": "test ",
-            "date": "2026-09-14",
-            "number_of_pages": "1",
-            "pages": [
-                "images/volume1/chapter1/page1.png",
-                "images/volume1/chapter1/page2.png",
-                "images/volume1/chapter1/page3.png"
-            ]
+            "v_id": "1",
+            "chapter_number": "7",
+            "tittle": "Maybe is not over",
+            "date": "2026-09-07",
+            "writer": "Lux",
+            "number_of_pages": "2"
         },
         {
             "chapter_id": "8",
-            "v_id": "2",
-            "chapter_number": "3",
-            "tittle": "test ",
-            "date": "2026-09-15",
-            "number_of_pages": "2",
-            "pages": [
-                "images/volume1/chapter1/page1.png",
-                "images/volume1/chapter1/page2.png",
-                "images/volume1/chapter1/page3.png"
-            ]
+            "v_id": "1",
+            "chapter_number": "8",
+            "tittle": "Gambling Time",
+            "date": "2026-09-07",
+            "writer": "Lux",
+            "number_of_pages": "3"
         },
         {
             "chapter_id": "9",
-            "v_id": "2",
-            "chapter_number": "4",
-            "tittle": "test ",
-            "date": "2026-09-16",
-            "number_of_pages": "0",
-            "pages": [
-                "images/volume1/chapter1/page1.png",
-                "images/volume1/chapter1/page2.png",
-                "images/volume1/chapter1/page3.png"
-            ]
+            "v_id": "1",
+            "chapter_number": "9",
+            "tittle": "Our first time",
+            "date": "2026-09-08",
+            "writer": "Lux",
+            "number_of_pages": "3"
+        },
+        {
+            "chapter_id": "10",
+            "v_id": "1",
+            "chapter_number": "10",
+            "tittle": "He eats Dirt",
+            "date": "2026-09-08",
+            "writer": "Lux",
+            "number_of_pages": "1"
+        },
+        {
+            "chapter_id": "11",
+            "v_id": "1",
+            "chapter_number": "11",
+            "tittle": "The Song",
+            "date": "2026-09-08",
+            "writer": "Kit",
+            "number_of_pages": "1"
+        },
+        {
+            "chapter_id": "12",
+            "v_id": "1",
+            "chapter_number": "12",
+            "tittle": "The Surprise",
+            "date": "2026-09-11",
+            "writer": "Lux",
+            "number_of_pages": "1"
+        },
+        {
+            "chapter_id": "13",
+            "v_id": "1",
+            "chapter_number": "13",
+            "tittle": "Meeting",
+            "date": "2026-09-11",
+            "writer": "Kit",
+            "number_of_pages": "1"
+        },
+        {
+            "chapter_id": "14",
+            "v_id": "1",
+            "chapter_number": "14",
+            "tittle": "Green Hell",
+            "date": "2026-09-11",
+            "writer": "Kit",
+            "number_of_pages": "1"
+        },
+        {
+            "chapter_id": "15",
+            "v_id": "1",
+            "chapter_number": "15",
+            "tittle": "First Kiss",
+            "date": "2026-09-13",
+            "writer": "Kit",
+            "number_of_pages": "1"
         }
     ]
 }

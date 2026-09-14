@@ -551,33 +551,35 @@ function loadReader() {
 // ==========================
 // SHOW CURRENT PAGE
 // ==========================
-
+function getPagePath(chapter, pageNumber) {
+    return "images/volume" +
+        chapter.v_id +
+        "/chapter" +
+        chapter.chapter_number +
+        "/page" +
+        pageNumber +
+        ".jpg";
+}
 function showPage() {
 
-    const comicPage =
-        document.getElementById("comicPage");
+    const comicPage = document.getElementById("comicPage");
+    const pageNumber = document.getElementById("pageNumber");
 
+    const totalPages = Number(currentChapter.number_of_pages);
 
-    const pageNumber =
-        document.getElementById("pageNumber");
+    if (currentPage < 0 || currentPage >= totalPages) {
+        return;
+    }
 
+    const pagePath = getPagePath(
+        currentChapter,
+        currentPage + 1
+    );
 
-    // Get current image
-    const image =
-        currentChapter.pages[currentPage];
+    comicPage.src = pagePath;
 
-
-    // Show image
-    comicPage.src = image;
-
-
-    // Show page number
     pageNumber.textContent =
-        "Page " +
-        (currentPage + 1) +
-        " / " +
-        currentChapter.pages.length;
-
+        "Page " + (currentPage + 1) + " / " + totalPages;
 }
 
 
@@ -588,22 +590,12 @@ function showPage() {
 
 function nextPage() {
 
-    if (!currentChapter) {
-        return;
-    }
+    const totalPages = Number(currentChapter.number_of_pages);
 
-
-    if (
-        currentPage <
-        currentChapter.pages.length - 1
-    ) {
-
+    if (currentPage < totalPages - 1) {
         currentPage++;
-
         showPage();
-
     }
-
 }
 
 
@@ -614,19 +606,10 @@ function nextPage() {
 
 function previousPage() {
 
-    if (!currentChapter) {
-        return;
-    }
-
-
     if (currentPage > 0) {
-
         currentPage--;
-
         showPage();
-
     }
-
 }
 
 
@@ -834,3 +817,7 @@ function goToAbout() {
 // Run the volume loader
 loadVolumes();
 loadChapters();
+
+
+
+showPage()
