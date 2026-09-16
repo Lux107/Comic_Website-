@@ -23,7 +23,7 @@
         {
             "id": 2,
             "title": "Volume 2",
-            "total_chapters": 1,
+            "total_chapters": 2,
             "cover": "images/volume2.png"
         }
         
@@ -171,6 +171,15 @@
             "chapter_number": "1",
             "tittle": "Karaoke ",
             "date": "2026-09-14",
+            "writer": "Lux",
+            "number_of_pages": "3"
+        },
+        {
+            "chapter_id": "18",
+            "v_id": "2",
+            "chapter_number": "2",
+            "tittle": "Bald Spot",
+            "date": "2026-09-16",
             "writer": "Lux",
             "number_of_pages": "3"
         }
