@@ -16,13 +16,19 @@
     "volumes": [
         {
             "id": 1,
-            "title": "Volume 1",
+            "title": "Malasia Adventures V1",
             "total_chapters": 15,
             "cover": "images/volume1.png"
         },
         {
             "id": 2,
-            "title": "Volume 2",
+            "title": "Malasia Adventures V2",
+            "total_chapters": 4,
+            "cover": "images/volume2.png"
+        }
+        {
+            "id": 3,
+            "title": "Games Adventures V1",
             "total_chapters": 4,
             "cover": "images/volume2.png"
         }
