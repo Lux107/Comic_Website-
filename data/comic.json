@@ -15,24 +15,23 @@
 
     "volumes": [
         {
-            "id": 1,
-            "title": "Malasia Adventures V1",
-            "total_chapters": 15,
-            "cover": "images/volume1.png"
+            "v_id": "1",
+            "v_tittle": "In Malaysia V1",
+            "v_total_chapters": "15",
+            "v_cover": "images/volume1.jpg"
         },
         {
-            "id": 2,
-            "title": "Malasia Adventures V2",
-            "total_chapters": 4,
-            "cover": "images/volume2.png"
+            "v_id": "2",
+            "v_tittle": "In Malaysia V2",
+            "v_total_chapters": "2",
+            "v_cover": "images/volume2.jpg"
         },
         {
-            "id": 3,
-            "title": "Games Adventures V1",
-            "total_chapters": 4,
-            "cover": "images/volume2.png"
+            "v_id": "3",
+            "v_tittle": "Gaming V1",
+            "v_total_chapters": "2",
+            "v_cover": "images/volume3.jpg"
         }
-
     ],
 
     "chapters": [
@@ -103,8 +102,8 @@
             "chapter_id": "8",
             "v_id": "1",
             "chapter_number": "8",
-            "tittle": "Gambling Time",
-            "date": "2026-09-07",
+            "tittle": "Karaoke ",
+            "date": "2026-09-14",
             "writer": "Lux",
             "number_of_pages": "3"
         },
@@ -157,10 +156,10 @@
             "chapter_id": "14",
             "v_id": "1",
             "chapter_number": "14",
-            "tittle": "Green Hell",
-            "date": "2026-09-11",
+            "tittle": "Bald Spot",
+            "date": "2026-09-16",
             "writer": "Kit",
-            "number_of_pages": "1"
+            "number_of_pages": "3"
         },
         {
             "chapter_id": "15",
@@ -171,12 +170,13 @@
             "writer": "Kit",
             "number_of_pages": "1"
         },
+
         {
             "chapter_id": "17",
             "v_id": "2",
             "chapter_number": "1",
-            "tittle": "Karaoke ",
-            "date": "2026-09-14",
+            "tittle": "Hot Pot",
+            "date": "2026-09-17",
             "writer": "Lux",
             "number_of_pages": "3"
         },
@@ -184,26 +184,36 @@
             "chapter_id": "18",
             "v_id": "2",
             "chapter_number": "2",
-            "tittle": "Bald Spot",
-            "date": "2026-09-16",
-            "writer": "Lux",
-            "number_of_pages": "3"
-        },
-        {
-            "chapter_id": "19",
-            "v_id": "2",
-            "chapter_number": "3",
-            "tittle": "Hot pot",
-            "date": "2026-09-17",
-            "writer": "Lux",
-            "number_of_pages": "3"
-        },
-        {
-            "chapter_id": "20",
-            "v_id": "2",
-            "chapter_number": "4",
             "tittle": "Pool Episode",
             "date": "2026-09-18",
+            "writer": "Lux",
+            "number_of_pages": "3"
+        },
+
+        {
+            "chapter_id": "22",
+            "v_id": "3",
+            "chapter_number": "1",
+            "tittle": "Gambling Time",
+            "date": "2026-09-07",
+            "writer": "Lux",
+            "number_of_pages": "3"
+        },
+        {
+            "chapter_id": "23",
+            "v_id": "3",
+            "chapter_number": "2",
+            "tittle": "Green Hell",
+            "date": "2026-09-11",
+            "writer": "Lux",
+            "number_of_pages": "3"
+        },
+        {
+            "chapter_id": "24",
+            "v_id": "3",
+            "chapter_number": "3",
+            "tittle": "Hell Kitchen",
+            "date": "2026-09-21",
             "writer": "Lux",
             "number_of_pages": "3"
         }
