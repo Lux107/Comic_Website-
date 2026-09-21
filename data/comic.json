@@ -25,14 +25,14 @@
             "title": "Malasia Adventures V2",
             "total_chapters": 4,
             "cover": "images/volume2.png"
-        }
+        },
         {
             "id": 3,
             "title": "Games Adventures V1",
             "total_chapters": 4,
             "cover": "images/volume2.png"
         }
-        
+
     ],
 
     "chapters": [
