@@ -15,22 +15,22 @@
 
     "volumes": [
         {
-            "v_id": "1",
-            "v_tittle": "In Malaysia V1",
-            "v_total_chapters": "15",
-            "v_cover": "images/volume1.jpg"
+            "id": "1",
+            "title": "In Malaysia V1",
+            "total_chapters": "15",
+            "cover": "images/volume1.jpg"
         },
         {
-            "v_id": "2",
-            "v_tittle": "In Malaysia V2",
-            "v_total_chapters": "2",
-            "v_cover": "images/volume2.jpg"
+            "id": "2",
+            "title": "In Malaysia V2",
+            "total_chapters": "2",
+            "cover": "images/volume2.jpg"
         },
         {
-            "v_id": "3",
-            "v_tittle": "Gaming V1",
-            "v_total_chapters": "2",
-            "v_cover": "images/volume3.jpg"
+            "id": "3",
+            "title": "Gaming V1",
+            "total_chapters": "3",
+            "cover": "images/volume3.jpg"
         }
     ],
 
