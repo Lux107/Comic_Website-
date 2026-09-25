@@ -29,7 +29,7 @@
         {
             "id": "3",
             "title": "Gaming V1",
-            "total_chapters": "3",
+            "total_chapters": "4",
             "cover": "images/volume3.png"
         }
     ],
@@ -234,6 +234,15 @@
             "chapter_number": "3",
             "tittle": "Hell Kitchen",
             "date": "2026-09-21",
+            "writer": "Lux",
+            "number_of_pages": "3"
+        },
+        {
+            "chapter_id": "25",
+            "v_id": "3",
+            "chapter_number": "4",
+            "tittle": "A needle on Hai",
+            "date": "2026-09-25",
             "writer": "Lux",
             "number_of_pages": "3"
         }
