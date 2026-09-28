@@ -29,7 +29,7 @@
         {
             "id": "3",
             "title": "Gaming V1",
-            "total_chapters": "4",
+            "total_chapters": "5",
             "cover": "images/volume3.png"
         }
     ],
@@ -40,7 +40,7 @@
             "v_id": "1",
             "chapter_number": "1",
             "tittle": "BETA",
-            "date": "2026-05-28",
+            "date": "5/27/26",
             "writer": "Lux",
             "number_of_pages": "3"
         },
@@ -49,7 +49,7 @@
             "v_id": "1",
             "chapter_number": "2",
             "tittle": "Playing Games",
-            "date": "2026-05-28",
+            "date": "5/27/26",
             "writer": "Lux",
             "number_of_pages": "3"
         },
@@ -58,7 +58,7 @@
             "v_id": "1",
             "chapter_number": "3",
             "tittle": "Rice incident ",
-            "date": "2026-05-29",
+            "date": "5/28/26",
             "writer": "Lux",
             "number_of_pages": "3"
         },
@@ -67,7 +67,7 @@
             "v_id": "1",
             "chapter_number": "4",
             "tittle": "1, 2, Switch",
-            "date": "2026-05-29",
+            "date": "5/28/26",
             "writer": "Lux",
             "number_of_pages": "3"
         },
@@ -76,7 +76,7 @@
             "v_id": "1",
             "chapter_number": "5",
             "tittle": "I am scared...",
-            "date": "2026-05-31",
+            "date": "5/30/26",
             "writer": "Lux",
             "number_of_pages": "3"
         },
@@ -85,7 +85,7 @@
             "v_id": "1",
             "chapter_number": "6",
             "tittle": "Train or Car",
-            "date": "2026-06-01",
+            "date": "5/31/26",
             "writer": "Lux",
             "number_of_pages": "3"
         },
@@ -94,7 +94,7 @@
             "v_id": "1",
             "chapter_number": "7",
             "tittle": "Maybe is not over",
-            "date": "2026-09-07",
+            "date": "9/6/26",
             "writer": "Lux",
             "number_of_pages": "2"
         },
@@ -103,7 +103,7 @@
             "v_id": "1",
             "chapter_number": "8",
             "tittle": "Karaoke ",
-            "date": "2026-09-14",
+            "date": "9/13/26",
             "writer": "Lux",
             "number_of_pages": "3"
         },
@@ -112,7 +112,7 @@
             "v_id": "1",
             "chapter_number": "9",
             "tittle": "Our first time",
-            "date": "2026-09-08",
+            "date": "9/7/26",
             "writer": "Lux",
             "number_of_pages": "3"
         },
@@ -121,7 +121,7 @@
             "v_id": "1",
             "chapter_number": "10",
             "tittle": "He eats Dirt",
-            "date": "2026-09-08",
+            "date": "9/7/26",
             "writer": "Lux",
             "number_of_pages": "1"
         },
@@ -130,7 +130,7 @@
             "v_id": "1",
             "chapter_number": "11",
             "tittle": "The Song",
-            "date": "2026-09-08",
+            "date": "9/7/26",
             "writer": "Kit",
             "number_of_pages": "1"
         },
@@ -139,7 +139,7 @@
             "v_id": "1",
             "chapter_number": "12",
             "tittle": "The Surprise",
-            "date": "2026-09-11",
+            "date": "9/10/26",
             "writer": "Lux",
             "number_of_pages": "1"
         },
@@ -148,7 +148,7 @@
             "v_id": "1",
             "chapter_number": "13",
             "tittle": "Meeting",
-            "date": "2026-09-11",
+            "date": "9/10/26",
             "writer": "Kit",
             "number_of_pages": "1"
         },
@@ -157,7 +157,7 @@
             "v_id": "1",
             "chapter_number": "14",
             "tittle": "Bald Spot",
-            "date": "2026-09-16",
+            "date": "9/15/26",
             "writer": "Kit",
             "number_of_pages": "3"
         },
@@ -166,17 +166,25 @@
             "v_id": "1",
             "chapter_number": "15",
             "tittle": "First Kiss",
-            "date": "2026-09-13",
+            "date": "9/12/26",
             "writer": "Kit",
             "number_of_pages": "1"
         },
-
+        {
+            "chapter_id": "16",
+            "v_id": null,
+            "chapter_number": null,
+            "tittle": null,
+            "date": null,
+            "writer": null,
+            "number_of_pages": null
+        },
         {
             "chapter_id": "17",
             "v_id": "2",
             "chapter_number": "1",
             "tittle": "Hot Pot",
-            "date": "2026-09-17",
+            "date": "9/16/26",
             "writer": "Lux",
             "number_of_pages": "3"
         },
@@ -185,37 +193,43 @@
             "v_id": "2",
             "chapter_number": "2",
             "tittle": "Pool Episode",
-            "date": "2026-09-18",
+            "date": "9/17/26",
             "writer": "Lux",
             "number_of_pages": "3"
         },
-
         {
             "chapter_id": "19",
             "v_id": "2",
             "chapter_number": "3",
             "tittle": "Girls Night",
-            "date": "2026-09-23",
+            "date": "9/22/26",
             "writer": "Kit",
             "number_of_pages": "1"
         },
-
         {
             "chapter_id": "20",
             "v_id": "2",
             "chapter_number": "4",
             "tittle": "Rhythm game",
-            "date": "2026-09-23",
+            "date": "9/22/26",
             "writer": "Kit",
             "number_of_pages": "1"
         },
-
+        {
+            "chapter_id": "21",
+            "v_id": null,
+            "chapter_number": null,
+            "tittle": null,
+            "date": null,
+            "writer": null,
+            "number_of_pages": null
+        },
         {
             "chapter_id": "22",
             "v_id": "3",
             "chapter_number": "1",
             "tittle": "Gambling Time",
-            "date": "2026-09-07",
+            "date": "9/6/26",
             "writer": "Lux",
             "number_of_pages": "3"
         },
@@ -224,7 +238,7 @@
             "v_id": "3",
             "chapter_number": "2",
             "tittle": "Green Hell",
-            "date": "2026-09-11",
+            "date": "9/10/26",
             "writer": "Lux",
             "number_of_pages": "3"
         },
@@ -233,7 +247,7 @@
             "v_id": "3",
             "chapter_number": "3",
             "tittle": "Hell Kitchen",
-            "date": "2026-09-21",
+            "date": "9/20/26",
             "writer": "Lux",
             "number_of_pages": "3"
         },
@@ -242,7 +256,16 @@
             "v_id": "3",
             "chapter_number": "4",
             "tittle": "A needle on Hai",
-            "date": "2026-09-25",
+            "date": "9/24/26",
+            "writer": "Lux",
+            "number_of_pages": "3"
+        },
+        {
+            "chapter_id": "26",
+            "v_id": "3",
+            "chapter_number": "5",
+            "tittle": "Street Smart",
+            "date": "9/27/26",
             "writer": "Lux",
             "number_of_pages": "3"
         }
