@@ -2,6 +2,9 @@
 let comicChapters = [];
 
 let chapterAscending = true;
+// ==========================
+// Main page 
+// ==========================
 
 // Load the comic database
 fetch("data/comic.json")
@@ -48,6 +51,37 @@ fetch("data/comic.json")
             tagsContainer.appendChild(tagElement);
         });
 
+        // Recent Chapters
+
+        const recentChapters =
+            document.getElementById("recentChapters");
+
+        const latestChapters =
+            data.chapters
+                .sort((a, b) =>
+                    new Date(b.date) - new Date(a.date)
+                )
+                .slice(0, 3);
+
+
+        latestChapters.forEach(chapter => {
+
+            const chapterElement =
+                document.createElement("div");
+
+            chapterElement.innerHTML = `
+        <h3>Chapter ${chapter.chapter_number}</h3>
+
+        <p>${chapter.tittle}</p>
+
+        <p>${chapter.date}</p>
+
+        <p>Writer: ${chapter.writer}</p>
+    `;
+
+            recentChapters.appendChild(chapterElement);
+
+        });
     })
     .catch(error => {
         console.error("Error loading comic data:", error);
