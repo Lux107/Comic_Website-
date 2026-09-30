@@ -51,7 +51,7 @@ fetch("data/comic.json")
 
             cover.src = coverOrder[currentCover];
 
-        }, 3000);
+        }, 10000);
 
 
         // Recent Chapters
