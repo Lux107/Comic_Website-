@@ -69,14 +69,13 @@ fetch("data/comic.json")
             const chapterElement =
                 document.createElement("div");
 
+            chapterElement.classList.add("recentChapter");
+
             chapterElement.innerHTML = `
-        <h3>Chapter ${chapter.chapter_number}</h3>
-
-        <p>${chapter.tittle}</p>
-
-        <p>${chapter.date}</p>
-
-        <p>Writer: ${chapter.writer}</p>
+        <a href="reader.html?chapter=${chapter.chapter_id}">
+            <h3>${chapter.tittle}</h3>
+            <p>${chapter.date}</p>
+        </a>
     `;
 
             recentChapters.appendChild(chapterElement);
