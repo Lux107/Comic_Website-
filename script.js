@@ -1,7 +1,13 @@
 ﻿let comicData;
 let comicChapters = [];
 
+// ==========================
+// GLOBAL VARIABLES
+// ==========================
+
+let volumeAscending = true;
 let chapterAscending = true;
+
 // ==========================
 // Main page 
 // ==========================
@@ -94,7 +100,8 @@ fetch("data/comic.json")
 
 function loadVolumes() {
 
-    const volumeList = document.getElementById("volumeList");
+    const volumeList =
+        document.getElementById("volumeList");
 
     if (!volumeList) {
         return;
@@ -122,17 +129,27 @@ function loadVolumes() {
                 .forEach(volume => {
 
                 // Create volume card
-                const volumeCard = document.createElement("div");
+                    const volumeCard =
+                        document.createElement("div");
 
-                volumeCard.classList.add("volumeCard");
+                    volumeCard.classList.add("volumeCard");
+                    // Make finished volume grey
+                    if (volume.finished === true) {
+
+                        volumeCard.classList.add("finished");
+
+                    }
+
 
                 // Cover container
-                const coverContainer = document.createElement("div");
+                    const coverContainer =
+                        document.createElement("div");
 
                 coverContainer.classList.add("coverContainer");
 
                 // Volume cover
-                const cover = document.createElement("img");
+                    const cover =
+                        document.createElement("img");
 
                 cover.src = volume.cover;
 
@@ -140,14 +157,16 @@ function loadVolumes() {
 
 
                 // Volume title
-                const title = document.createElement("h2");
+                    const title =
+                        document.createElement("h2");
 
                 title.textContent =
                    
                     volume.title;
 
                 // Chapter number
-                const chapterNumber = document.createElement("span");
+                    const chapterNumber =
+                        document.createElement("span");
 
                 chapterNumber.textContent = volume.total_chapters;
 
@@ -157,7 +176,8 @@ function loadVolumes() {
 
 
                 // Select button
-                const button = document.createElement("button");
+                    const button =
+                        document.createElement("button");
 
                 button.textContent = " Select Volume";
 
@@ -177,20 +197,23 @@ function loadVolumes() {
 
                 volumeCard.appendChild(title);
                     // Finished status
-
                     if (volume.finished === true) {
 
                         const finishedText =
                             document.createElement("p");
 
-                        finishedText.textContent = "Finished";
+                        finishedText.textContent =
+                            "Finished";
 
-                        finishedText.classList.add("finishedText");
+                        finishedText.classList.add(
+                            "finishedText"
+                        );
 
-                        volumeCard.appendChild(finishedText);
+                        volumeCard.appendChild(
+                            finishedText
+                        );
 
                     }
-
                 volumeCard.appendChild(button);
 
 
