@@ -27,19 +27,29 @@ fetch("data/comic.json")
 
         const cover = document.getElementById("cover");
 
+        // Make a copy of the cover list
+        let coverOrder = [...data.comic.cover];
+
+        // Shuffle the covers
+        coverOrder.sort(() => Math.random() - 0.5);
+
         let currentCover = 0;
 
-        cover.src = data.comic.cover[currentCover];
+        cover.src = coverOrder[currentCover];
 
         setInterval(() => {
 
             currentCover++;
 
-            if (currentCover >= data.comic.cover.length) {
+            // Shuffle again after showing all covers
+            if (currentCover >= coverOrder.length) {
+
+                coverOrder.sort(() => Math.random() - 0.5);
+
                 currentCover = 0;
             }
 
-            cover.src = data.comic.cover[currentCover];
+            cover.src = coverOrder[currentCover];
 
         }, 3000);
 
