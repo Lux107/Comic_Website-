@@ -110,11 +110,10 @@ button {
     }
 .finished {
     background-color: #555;
-    opacity: 1;
+  
 }
 
 .finishedText {
-    color: #ccc;
     font-weight: bold;
 }
 /* ==========================
