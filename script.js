@@ -13,43 +13,15 @@ fetch("data/comic.json")
 
         comicData = data;
 
-        // Comic cover
-        document.getElementById("cover").src =
-            data.comic.cover;
-
         // Comic name
         document.getElementById("name").textContent =
             data.comic.name;
 
-
-        // Description
-        document.getElementById("description").textContent =
-            data.comic.description;
-
-   
-
-        // Status
-        document.getElementById("status").textContent =
-            data.comic.status;
-
-        // Last updated
-        document.getElementById("lastUpdated").textContent =
-            data.comic.lastUpdated;
-
-        // Tags
-        const tagsContainer =
-            document.getElementById("comicTags");
+        // Comic cover
+        document.getElementById("cover").src =
+            data.comic.cover;
 
 
-        data.comic.tags.forEach(tag => {
-
-            const tagElement =
-                document.createElement("span");
-
-            tagElement.textContent = tag;
-
-            tagsContainer.appendChild(tagElement);
-        });
 
         // Recent Chapters
 
@@ -81,6 +53,17 @@ fetch("data/comic.json")
             recentChapters.appendChild(chapterElement);
 
         });
+
+
+        // Description
+        document.getElementById("description").textContent =
+            data.comic.description;
+
+ 
+
+   
+
+        
     })
     .catch(error => {
         console.error("Error loading comic data:", error);

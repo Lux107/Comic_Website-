@@ -19,9 +19,13 @@ main {
 
 
 button {
+    width: 150px;
+    height: 45px;
     padding: 10px 20px;
     margin: 5px;
     cursor: pointer;
+    white-space: nowrap;
+    box-sizing: border-box;
 }
 
 
