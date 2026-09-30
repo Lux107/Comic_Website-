@@ -17,10 +17,25 @@ fetch("data/comic.json")
         document.getElementById("name").textContent =
             data.comic.name;
 
-        // Comic cover
-        document.getElementById("cover").src =
-            data.comic.cover;
+        // Comic cover rotation
 
+        const cover = document.getElementById("cover");
+
+        let currentCover = 0;
+
+        cover.src = data.comic.cover[currentCover];
+
+        setInterval(() => {
+
+            currentCover++;
+
+            if (currentCover >= data.comic.cover.length) {
+                currentCover = 0;
+            }
+
+            cover.src = data.comic.cover[currentCover];
+
+        }, 3000);
 
 
         // Recent Chapters
@@ -91,9 +106,20 @@ function loadVolumes() {
 
             volumeList.innerHTML = "";
 
-            data.volumes.forEach(volume =>
+            data.volumes
+                .sort((a, b) => {
 
-            {
+                    if (volumeAscending) {
+
+                        return Number(a.id) - Number(b.id);
+
+                    } else {
+
+                        return Number(b.id) - Number(a.id);
+
+                    }
+                })
+                .forEach(volume => {
 
                 // Create volume card
                 const volumeCard = document.createElement("div");
@@ -150,6 +176,20 @@ function loadVolumes() {
                 volumeCard.appendChild(coverContainer);
 
                 volumeCard.appendChild(title);
+                    // Finished status
+
+                    if (volume.finished === true) {
+
+                        const finishedText =
+                            document.createElement("p");
+
+                        finishedText.textContent = "Finished";
+
+                        finishedText.classList.add("finishedText");
+
+                        volumeCard.appendChild(finishedText);
+
+                    }
 
                 volumeCard.appendChild(button);
 
@@ -175,7 +215,36 @@ function loadVolumes() {
 
 }
 
+// ==========================
+// SORT VOLUMES
+// ==========================
 
+function sortVolumes() {
+
+    volumeAscending =
+        !volumeAscending;
+
+
+    const sortButton =
+        document.getElementById("sortButton");
+
+
+    if (volumeAscending) {
+
+        sortButton.textContent =
+            "Volume 1 → Last";
+
+    } else {
+
+        sortButton.textContent =
+            "Last → Volume 1";
+
+    }
+
+
+    loadVolumes();
+
+}
 
 // ==========================
 // CHAPTER SELECTOR

@@ -2,14 +2,12 @@
     "comic": {
         "id": 1,
         "name": "Lux & Nadia",
-        "cover": "images/cover.png",
-        "description": "a comic about us",
-        "tags": [
-            "Romance",
-            "Comedy",
-            "AI Comic"
+        "cover": [
+            "images/volume1.png",
+            "images/volume2.png",
+            "images/volume3.png",
+            "images/volume_extra1.png"
         ],
-        "lastUpdated": "2026-09-12",
         "status": "Ongoing"
     },
 
@@ -18,19 +16,22 @@
             "id": "1",
             "title": "In Malaysia V1",
             "total_chapters": "15",
-            "cover": "images/volume1.png"
+            "cover": "images/volume1.png",
+            "finished": true
         },
         {
             "id": "2",
             "title": "In Malaysia V2",
             "total_chapters": "4",
-            "cover": "images/volume2.png"
+            "cover": "images/volume2.png",
+            "finished": false
         },
         {
             "id": "3",
             "title": "Gaming V1",
             "total_chapters": "5",
-            "cover": "images/volume3.png"
+            "cover": "images/volume3.png",
+            "finished": false
         }
     ],
 
