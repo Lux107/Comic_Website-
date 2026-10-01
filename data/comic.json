@@ -6,12 +6,15 @@
             "images/volume1.png",
             "images/volume2.png",
             "images/volume3.png",
-            "images/volume_extra1.png",
-            "images/volume_extra2.png",
-            "images/volume_extra3.png",
-            "images/volume_extra4.png",
-            "images/volume_extra5.png",
-            "images/volume_extra6.png"
+            "images/volume4.png",
+            "images/volume_extra/volume_extra1.png",
+            "images/volume_extra/volume_extra2.png",
+            "images/volume_extra/volume_extra3.png",
+            "images/volume_extra/volume_extra4.png",
+            "images/volume_extra/volume_extra5.png",
+            "images/volume_extra/volume_extra6.png"
+
+
         ],
         "status": "Ongoing"
     },
@@ -36,6 +39,13 @@
             "title": "Gaming V1",
             "total_chapters": "5",
             "cover": "images/volume3.png",
+            "finished": false
+        },
+        {
+            "id": "4",
+            "title": "Nadia's Guide to lux'",
+            "total_chapters": "1",
+            "cover": "images/volume4.png",
             "finished": false
         }
     ],
@@ -274,6 +284,15 @@
             "date": "9/27/26",
             "writer": "Lux",
             "number_of_pages": "3"
+        },
+        {
+            "chapter_id": "28",
+            "v_id": "4",
+            "chapter_number": "1",
+            "tittle": "When he is Sad",
+            "date": "10/01/26",
+            "writer": "Lux",
+            "number_of_pages": "1"
         }
     ]
 }
