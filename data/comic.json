@@ -7,6 +7,7 @@
             "images/volume2.png",
             "images/volume3.png",
             "images/volume4.png",
+            "images/volume5.png",
             "images/volume_extra/volume_extra1.png",
             "images/volume_extra/volume_extra2.png",
             "images/volume_extra/volume_extra3.png",
@@ -25,28 +26,35 @@
             "title": "In Malaysia V1",
             "total_chapters": "15",
             "cover": "images/volume1.png",
-            "finished": true
+            "finished": "TRUE"
         },
         {
             "id": "2",
             "title": "In Malaysia V2",
             "total_chapters": "4",
             "cover": "images/volume2.png",
-            "finished": false
+            "finished": "FALSE"
         },
         {
             "id": "3",
             "title": "Gaming V1",
             "total_chapters": "5",
             "cover": "images/volume3.png",
-            "finished": false
+            "finished": "FALSE"
         },
         {
             "id": "4",
-            "title": "Nadia's Guide to lux'",
+            "title": "How to take care of a femboy",
             "total_chapters": "1",
             "cover": "images/volume4.png",
-            "finished": false
+            "finished": "FALSE"
+        },
+        {
+            "id": "5",
+            "title": "Lux Tales V1",
+            "total_chapters": "2",
+            "cover": "images/volume5.png",
+            "finished": "FALSE"
         }
     ],
 
@@ -286,13 +294,49 @@
             "number_of_pages": "3"
         },
         {
+            "chapter_id": "27",
+            "v_id": null,
+            "chapter_number": null,
+            "tittle": null,
+            "date": null,
+            "writer": null,
+            "number_of_pages": null
+        },
+        {
             "chapter_id": "28",
             "v_id": "4",
             "chapter_number": "1",
-            "tittle": "When he is Sad",
-            "date": "10/01/26",
+            "tittle": "When he is sad",
+            "date": "9/30/26",
             "writer": "Lux",
             "number_of_pages": "1"
+        },
+        {
+            "chapter_id": "29",
+            "v_id": null,
+            "chapter_number": null,
+            "tittle": null,
+            "date": null,
+            "writer": null,
+            "number_of_pages": null
+        },
+        {
+            "chapter_id": "30",
+            "v_id": "5",
+            "chapter_number": "1",
+            "tittle": "Intro ",
+            "date": "10/1/26",
+            "writer": "Lux",
+            "number_of_pages": "3"
+        },
+        {
+            "chapter_id": "31",
+            "v_id": "5",
+            "chapter_number": "2",
+            "tittle": "characters ",
+            "date": "10/1/26",
+            "writer": "Lux",
+            "number_of_pages": "3"
         }
     ]
 }
