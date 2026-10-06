@@ -352,7 +352,16 @@
             "v_id": "5",
             "chapter_number": "3",
             "tittle": "Bolt's day  ",
-            "date": "2026/10/05",
+            "date": "10/5/26",
+            "writer": "Lux",
+            "number_of_pages": "3"
+        },
+        {
+            "chapter_id": "34",
+            "v_id": "5",
+            "chapter_number": "4",
+            "tittle": "Revolution",
+            "date": "10/6/26",
             "writer": "Lux",
             "number_of_pages": "3"
         }
