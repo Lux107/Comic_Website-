@@ -373,6 +373,15 @@
             "date": "10/7/26",
             "writer": "Lux",
             "number_of_pages": "3"
+        },
+        {
+            "chapter_id": "36",
+            "v_id": "5",
+            "chapter_number": "7",
+            "tittle": "Deadlock night",
+            "date": "10/8/26",
+            "writer": "Lux",
+            "number_of_pages": "3"
         }
 
     ]
