@@ -1,47 +1,128 @@
+
+/* ==========================
+   GLOBAL THEME — YOUTUBE MUSIC INSPIRED
+   ========================== */
+
+:root {
+    --background: #121212;
+    --surface: #1f1f1f;
+    --surface-hover: #2b2b2b;
+    --button: #303030;
+    --button-hover: #454545;
+    --border: #383838;
+    --text: #f1f1f1;
+    --muted-text: #b3b3b3;
+    --green: #1db954;
+}
+
+/* ==========================
+   BODY
+   ========================== */
+
 body {
     font-family: Arial, sans-serif;
     text-align: center;
     margin: 40px;
+    background-color: var(--background);
+    color: var(--text);
 }
 
-
 main {
-    max-width: 600px;
+    max-width: 900px;
     margin: auto;
 }
 
+h1, h2, h3 {
+    color: var(--text);
+}
+
+p {
+    color: var(--muted-text);
+}
+
+a {
+    color: inherit;
+}
+
+/* ==========================
+   COVER
+   ========================== */
 
 #cover {
     width: 300px;
     max-width: 100%;
-    border-radius: 10px;
+    border-radius: 12px;
 }
 
+/* ==========================
+   BUTTONS
+   ========================== */
 
 button {
     width: 150px;
-    height: 45px;
+    min-height: 45px;
     padding: 10px 20px;
     margin: 5px;
     cursor: pointer;
     white-space: nowrap;
     box-sizing: border-box;
+    background-color: var(--button);
+    color: var(--text);
+    border: 1px solid var(--border);
+    border-radius: 24px;
+    font-size: 14px;
+    font-weight: bold;
+    transition: background-color 0.2s ease, transform 0.2s ease;
 }
 
+    button:hover {
+        background-color: var(--button-hover);
+        transform: scale(1.03);
+    }
+
+    button:disabled {
+        opacity: 0.45;
+        cursor: not-allowed;
+        transform: none;
+    }
+
+/* ==========================
+   COMIC TAGS
+   ========================== */
 
 #comicTags span {
     display: inline-block;
     margin: 5px;
     padding: 5px 10px;
-    background: lightgray;
-    border-radius: 10px;
+    background: var(--button);
+    color: var(--text);
+    border-radius: 20px;
+}
+
+/* ==========================
+   RECENT CHAPTERS
+   ========================== */
+
+#recentChapters {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
 }
 
 .recentChapter {
-    border: 2px solid black;
-    padding: 15px;
-    margin-bottom: 10px;
+    border: 1px solid var(--border);
+    padding: 18px;
+    margin-bottom: 0;
+    border-radius: 14px;
+    background-color: var(--surface);
+    text-align: left;
+    transition: background-color 0.2s ease, transform 0.2s ease;
 }
+
+    .recentChapter:hover {
+        background-color: var(--surface-hover);
+        transform: translateY(-2px);
+    }
 
     .recentChapter a {
         text-decoration: none;
@@ -51,10 +132,40 @@ button {
 
     .recentChapter h3 {
         margin: 0;
+        color: var(--text);
     }
 
     .recentChapter p {
         margin: 5px 0 0;
+    }
+
+/* ==========================
+   CHAPTER TYPE LABELS
+   ========================== */
+
+.chapterType {
+    display: inline-block;
+    width: fit-content;
+    padding: 5px 12px;
+    margin-top: 10px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: bold;
+    letter-spacing: 0.3px;
+}
+
+    /* Comic: greenish charcoal */
+    .chapterType.comic {
+        background-color: #1c3027;
+        color: #9be0b3;
+        border: 1px solid #315442;
+    }
+
+    /* Written: blackish green */
+    .chapterType.written {
+        background-color: #12372a;
+        color: #b5efc7;
+        border: 1px solid #286447;
     }
 
 /* ==========================
@@ -68,21 +179,31 @@ button {
     gap: 20px;
 }
 
-
 .volumeCard {
     width: 220px;
     padding: 15px;
-    border: 1px solid #ccc;
-    border-radius: 15px;
-    background: #f5f5f5;
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    background: var(--surface);
+    color: var(--text);
+    transition: background-color 0.2s ease, transform 0.2s ease;
 }
 
+    .volumeCard:hover {
+        background-color: var(--surface-hover);
+        transform: translateY(-3px);
+    }
 
     .volumeCard img {
         width: 100%;
         border-radius: 10px;
     }
 
+    .volumeCard h2 {
+        font-size: 18px;
+    }
+
+/* Volume cover and chapter count */
 
 .coverContainer {
     position: relative;
@@ -97,10 +218,10 @@ button {
         position: absolute;
         top: 5px;
         left: 5px;
-        background: #4F91BD;
+        background: #286744;
         color: white;
         padding: 5px 8px;
-        border-radius: 5px;
+        border-radius: 8px;
         font-size: 20px;
         font-weight: bold;
         font-family: Arial, sans-serif;
@@ -108,14 +229,20 @@ button {
         -webkit-text-size-adjust: none;
         text-size-adjust: none;
     }
+
+/* Finished volumes */
+
 .finished {
-    background-color: #555;
-  
+    background-color: #191919;
+    border-color: #303030;
+    opacity: 0.7;
 }
 
 .finishedText {
     font-weight: bold;
+    color: #9be0b3;
 }
+
 /* ==========================
    CHAPTER SELECTOR
    ========================== */
@@ -128,12 +255,10 @@ button {
     text-align: left;
 }
 
-
 #volumeCover {
     width: 150px;
     border-radius: 15px;
 }
-
 
 #chapterList {
     display: flex;
@@ -142,25 +267,27 @@ button {
     margin-top: 20px;
 }
 
-
 .chapterCard {
     padding: 20px;
-    border: 1px solid #ccc;
+    border: 1px solid var(--border);
     border-radius: 15px;
     text-align: left;
-    background: #f5f5f5;
+    background: var(--surface);
+    color: var(--text);
+    transition: background-color 0.2s ease;
 }
 
+    .chapterCard:hover {
+        background-color: var(--surface-hover);
+    }
 
     .chapterCard h2 {
         margin-top: 0;
     }
 
-
     .chapterCard h3 {
         margin-bottom: 5px;
     }
-
 
     .chapterCard p {
         margin-top: 5px;
@@ -172,8 +299,8 @@ button {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    gap: 20px;
 }
-
 
 .chapterRightSide {
     display: flex;
@@ -182,9 +309,9 @@ button {
     gap: 5px;
 }
 
-
     .chapterRightSide span {
         font-weight: bold;
+        color: var(--muted-text);
     }
 
 /* ==========================
@@ -197,9 +324,65 @@ button {
     margin: 20px 0;
 }
 
-
 #comicPage {
     max-width: 100%;
     max-height: 80vh;
     border-radius: 10px;
+}
+
+/* Written story reading surface */
+
+#writtenPage {
+    width: 100%;
+    max-width: 700px;
+    min-height: 350px;
+    margin: 0 auto;
+    padding: 30px;
+    box-sizing: border-box;
+    background-color: #172820;
+    border: 1px solid #294737;
+    border-radius: 16px;
+    color: #eeeeee;
+    font-size: 18px;
+    line-height: 1.8;
+    text-align: left;
+    white-space: pre-wrap;
+    overflow-wrap: anywhere;
+}
+
+/* ==========================
+   RESPONSIVE LAYOUT
+   ========================== */
+
+@media (max-width: 600px) {
+    body {
+        margin: 20px 12px;
+    }
+
+    #volumeHeader {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    #volumeCover {
+        width: 120px;
+    }
+
+    .chapterTopRow {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .chapterRightSide {
+        align-items: flex-start;
+    }
+
+    .volumeCard {
+        width: min(220px, 100%);
+    }
+
+    #writtenPage {
+        padding: 20px;
+        font-size: 16px;
+    }
 }

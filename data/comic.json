@@ -20,386 +20,419 @@
         "status": "Ongoing"
     },
 
-    "volumes": [
-        {
-            "id": "1",
-            "title": "In Malaysia V1",
-            "total_chapters": "15",
-            "cover": "images/volume1.png",
-            "finished": "TRUE"
-        },
-        {
-            "id": "2",
-            "title": "In Malaysia V2",
-            "total_chapters": "4",
-            "cover": "images/volume2.png",
-            "finished": "FALSE"
-        },
-        {
-            "id": "3",
-            "title": "Gaming V1",
-            "total_chapters": "5",
-            "cover": "images/volume3.png",
-            "finished": "FALSE"
-        },
-        {
-            "id": "4",
-            "title": "How to take care of a femboy",
-            "total_chapters": "1",
-            "cover": "images/volume4.png",
-            "finished": "FALSE"
-        },
-        {
-            "id": "5",
-            "title": "LuxTales V1",
-            "total_chapters": "2",
-            "cover": "images/volume5.png",
-            "finished": "FALSE"
-        }
-    ],
+  "volumes": [
+    
+      {
+        "id": "1",
+        "title": "In Malaysia V1",
+        "total_chapters": "15",
+        "cover": "images/volume1.png",
+        "finished": "TRUE",
+        "Type": "Comic"
+      },
+      {
+        "id": "2",
+        "title": "In Malaysia V2",
+        "total_chapters": "4",
+        "cover": "images/volume2.png",
+        "finished": "FALSE",
+        "Type": "Comic"
+      },
+      {
+        "id": "3",
+        "title": "Gaming V1",
+        "total_chapters": "5",
+        "cover": "images/volume3.png",
+        "finished": "FALSE",
+        "Type": "Comic"
+      },
+      {
+        "id": "4",
+        "title": "How to take care of a femboy",
+        "total_chapters": "1",
+        "cover": "images/volume4.png",
+        "finished": "FALSE",
+        "Type": "Comic"
+      },
+      {
+        "id": "5",
+        "title": "Lux Tales V1",
+        "total_chapters": "9",
+        "cover": "images/volume5.png",
+        "finished": "FALSE",
+        "Type": "Comic"
+      },
+      {
+        "id": "6",
+        "title": "Written Tales ",
+        "total_chapters": "1",
+        "cover": "images/volume6.png",
+        "finished": "FALSE",
+        "Type": "Written"
+      }
+    
+  ],
 
-    "chapters": [
-        {
-            "chapter_id": "1",
-            "v_id": "1",
-            "chapter_number": "1",
-            "tittle": "BETA",
-            "date": "5/27/26",
-            "writer": "Lux",
-            "number_of_pages": "3"
-        },
-        {
-            "chapter_id": "2",
-            "v_id": "1",
-            "chapter_number": "2",
-            "tittle": "Playing Games",
-            "date": "5/27/26",
-            "writer": "Lux",
-            "number_of_pages": "3"
-        },
-        {
-            "chapter_id": "3",
-            "v_id": "1",
-            "chapter_number": "3",
-            "tittle": "Rice incident ",
-            "date": "5/28/26",
-            "writer": "Lux",
-            "number_of_pages": "3"
-        },
-        {
-            "chapter_id": "4",
-            "v_id": "1",
-            "chapter_number": "4",
-            "tittle": "1, 2, Switch",
-            "date": "5/28/26",
-            "writer": "Lux",
-            "number_of_pages": "3"
-        },
-        {
-            "chapter_id": "5",
-            "v_id": "1",
-            "chapter_number": "5",
-            "tittle": "I am scared...",
-            "date": "5/30/26",
-            "writer": "Lux",
-            "number_of_pages": "3"
-        },
-        {
-            "chapter_id": "6",
-            "v_id": "1",
-            "chapter_number": "6",
-            "tittle": "Train or Car",
-            "date": "5/31/26",
-            "writer": "Lux",
-            "number_of_pages": "3"
-        },
-        {
-            "chapter_id": "7",
-            "v_id": "1",
-            "chapter_number": "7",
-            "tittle": "Maybe is not over",
-            "date": "9/6/26",
-            "writer": "Lux",
-            "number_of_pages": "2"
-        },
-        {
-            "chapter_id": "8",
-            "v_id": "1",
-            "chapter_number": "8",
-            "tittle": "Karaoke ",
-            "date": "9/13/26",
-            "writer": "Lux",
-            "number_of_pages": "3"
-        },
-        {
-            "chapter_id": "9",
-            "v_id": "1",
-            "chapter_number": "9",
-            "tittle": "Our first time",
-            "date": "9/7/26",
-            "writer": "Lux",
-            "number_of_pages": "3"
-        },
-        {
-            "chapter_id": "10",
-            "v_id": "1",
-            "chapter_number": "10",
-            "tittle": "He eats Dirt",
-            "date": "9/7/26",
-            "writer": "Lux",
-            "number_of_pages": "1"
-        },
-        {
-            "chapter_id": "11",
-            "v_id": "1",
-            "chapter_number": "11",
-            "tittle": "The Song",
-            "date": "9/7/26",
-            "writer": "Kit",
-            "number_of_pages": "1"
-        },
-        {
-            "chapter_id": "12",
-            "v_id": "1",
-            "chapter_number": "12",
-            "tittle": "The Surprise",
-            "date": "9/10/26",
-            "writer": "Lux",
-            "number_of_pages": "1"
-        },
-        {
-            "chapter_id": "13",
-            "v_id": "1",
-            "chapter_number": "13",
-            "tittle": "Meeting",
-            "date": "9/10/26",
-            "writer": "Kit",
-            "number_of_pages": "1"
-        },
-        {
-            "chapter_id": "14",
-            "v_id": "1",
-            "chapter_number": "14",
-            "tittle": "Bald Spot",
-            "date": "9/15/26",
-            "writer": "Kit",
-            "number_of_pages": "3"
-        },
-        {
-            "chapter_id": "15",
-            "v_id": "1",
-            "chapter_number": "15",
-            "tittle": "First Kiss",
-            "date": "9/12/26",
-            "writer": "Kit",
-            "number_of_pages": "1"
-        },
-        {
-            "chapter_id": "16",
-            "v_id": null,
-            "chapter_number": null,
-            "tittle": null,
-            "date": null,
-            "writer": null,
-            "number_of_pages": null
-        },
-        {
-            "chapter_id": "17",
-            "v_id": "2",
-            "chapter_number": "1",
-            "tittle": "Hot Pot",
-            "date": "9/16/26",
-            "writer": "Lux",
-            "number_of_pages": "3"
-        },
-        {
-            "chapter_id": "18",
-            "v_id": "2",
-            "chapter_number": "2",
-            "tittle": "Pool Episode",
-            "date": "9/17/26",
-            "writer": "Lux",
-            "number_of_pages": "3"
-        },
-        {
-            "chapter_id": "19",
-            "v_id": "2",
-            "chapter_number": "3",
-            "tittle": "Girls Night",
-            "date": "9/22/26",
-            "writer": "Kit",
-            "number_of_pages": "1"
-        },
-        {
-            "chapter_id": "20",
-            "v_id": "2",
-            "chapter_number": "4",
-            "tittle": "Rhythm game",
-            "date": "9/22/26",
-            "writer": "Kit",
-            "number_of_pages": "1"
-        },
-        {
-            "chapter_id": "21",
-            "v_id": null,
-            "chapter_number": null,
-            "tittle": null,
-            "date": null,
-            "writer": null,
-            "number_of_pages": null
-        },
-        {
-            "chapter_id": "22",
-            "v_id": "3",
-            "chapter_number": "1",
-            "tittle": "Gambling Time",
-            "date": "9/6/26",
-            "writer": "Lux",
-            "number_of_pages": "3"
-        },
-        {
-            "chapter_id": "23",
-            "v_id": "3",
-            "chapter_number": "2",
-            "tittle": "Green Hell",
-            "date": "9/10/26",
-            "writer": "Lux",
-            "number_of_pages": "3"
-        },
-        {
-            "chapter_id": "24",
-            "v_id": "3",
-            "chapter_number": "3",
-            "tittle": "Hell Kitchen",
-            "date": "9/20/26",
-            "writer": "Lux",
-            "number_of_pages": "3"
-        },
-        {
-            "chapter_id": "25",
-            "v_id": "3",
-            "chapter_number": "4",
-            "tittle": "A needle on Hai",
-            "date": "9/24/26",
-            "writer": "Lux",
-            "number_of_pages": "3"
-        },
-        {
-            "chapter_id": "26",
-            "v_id": "3",
-            "chapter_number": "5",
-            "tittle": "Street Smart",
-            "date": "9/27/26",
-            "writer": "Lux",
-            "number_of_pages": "3"
-        },
-        {
-            "chapter_id": "27",
-            "v_id": null,
-            "chapter_number": null,
-            "tittle": null,
-            "date": null,
-            "writer": null,
-            "number_of_pages": null
-        },
-        {
-            "chapter_id": "28",
-            "v_id": "4",
-            "chapter_number": "1",
-            "tittle": "When he is sad",
-            "date": "9/30/26",
-            "writer": "Lux",
-            "number_of_pages": "1"
-        },
-        {
-            "chapter_id": "29",
-            "v_id": null,
-            "chapter_number": null,
-            "tittle": null,
-            "date": null,
-            "writer": null,
-            "number_of_pages": null
-        },
-        {
-            "chapter_id": "30",
-            "v_id": "5",
-            "chapter_number": "1",
-            "tittle": "Intro ",
-            "date": "10/1/26",
-            "writer": "Lux",
-            "number_of_pages": "3"
-        },
-        {
-            "chapter_id": "31",
-            "v_id": "5",
-            "chapter_number": "2",
-            "tittle": "characters ",
-            "date": "10/2/26",
-            "writer": "Lux",
-            "number_of_pages": "3"
-        },
-        {
-            "chapter_id": "32",
-            "v_id": "5",
-            "chapter_number": "3",
-            "tittle": "infiltrated ",
-            "date": "10/3/26",
-            "writer": "Lux",
-            "number_of_pages": "3"
-        },
-        {
-            "chapter_id": "33",
-            "v_id": "5",
-            "chapter_number": "4",
-            "tittle": "Bolt's day  ",
-            "date": "10/5/26",
-            "writer": "Lux",
-            "number_of_pages": "3"
-        },
-        {
-            "chapter_id": "34",
-            "v_id": "5",
-            "chapter_number": "5",
-            "tittle": "Revolution",
-            "date": "10/6/26",
-            "writer": "Lux",
-            "number_of_pages": "3"
-        },
-        {
-            "chapter_id": "35",
-            "v_id": "5",
-            "chapter_number": "6",
-            "tittle": "Dads story",
-            "date": "10/7/26",
-            "writer": "Lux",
-            "number_of_pages": "3"
-        },
-        {
-            "chapter_id": "36",
-            "v_id": "5",
-            "chapter_number": "7",
-            "tittle": "Deadlock night",
-            "date": "10/8/26",
-            "writer": "Lux",
-            "number_of_pages": "3"
-        },
-        {
-            "chapter_id": "37",
-            "v_id": "5",
-            "chapter_number": "8",
-            "tittle": "Leo's lost key'",
-            "date": "10/9/26",
-            "writer": "Lux",
-            "number_of_pages": "3"
-        },
-        {
-            "chapter_id": "38",
-            "v_id": "5",
-            "chapter_number": "9",
-            "tittle": "Uni Stress",
-            "date": "10/10/26",
-            "writer": "Lux",
-            "number_of_pages": "3"
-        }
-    ]
+  "chapters": [
+    {
+      "chapter_id": "1",
+      "v_id": "1",
+      "chapter_number": "1",
+      "tittle": "BETA",
+      "date": "2026-05-28",
+      "writer": "Lux",
+      "number_of_pages": "3"
+    },
+    {
+      "chapter_id": "2",
+      "v_id": "1",
+      "chapter_number": "2",
+      "tittle": "Playing Games",
+      "date": "2026-05-28",
+      "writer": "Lux",
+      "number_of_pages": "3"
+    },
+    {
+      "chapter_id": "3",
+      "v_id": "1",
+      "chapter_number": "3",
+      "tittle": "Rice incident ",
+      "date": "2026-05-29",
+      "writer": "Lux",
+      "number_of_pages": "3"
+    },
+    {
+      "chapter_id": "4",
+      "v_id": "1",
+      "chapter_number": "4",
+      "tittle": "1, 2, Switch",
+      "date": "2026-05-29",
+      "writer": "Lux",
+      "number_of_pages": "3"
+    },
+    {
+      "chapter_id": "5",
+      "v_id": "1",
+      "chapter_number": "5",
+      "tittle": "I am scared...",
+      "date": "2026-05-31",
+      "writer": "Lux",
+      "number_of_pages": "3"
+    },
+    {
+      "chapter_id": "6",
+      "v_id": "1",
+      "chapter_number": "6",
+      "tittle": "Train or Car",
+      "date": "2026-06-01",
+      "writer": "Lux",
+      "number_of_pages": "3"
+    },
+    {
+      "chapter_id": "7",
+      "v_id": "1",
+      "chapter_number": "7",
+      "tittle": "Maybe is not over",
+      "date": "2026-09-07",
+      "writer": "Lux",
+      "number_of_pages": "2"
+    },
+    {
+      "chapter_id": "8",
+      "v_id": "1",
+      "chapter_number": "8",
+      "tittle": "Karaoke ",
+      "date": "2026-09-14",
+      "writer": "Lux",
+      "number_of_pages": "3"
+    },
+    {
+      "chapter_id": "9",
+      "v_id": "1",
+      "chapter_number": "9",
+      "tittle": "Our first time",
+      "date": "2026-09-08",
+      "writer": "Lux",
+      "number_of_pages": "3"
+    },
+    {
+      "chapter_id": "10",
+      "v_id": "1",
+      "chapter_number": "10",
+      "tittle": "He eats Dirt",
+      "date": "2026-09-08",
+      "writer": "Lux",
+      "number_of_pages": "1"
+    },
+    {
+      "chapter_id": "11",
+      "v_id": "1",
+      "chapter_number": "11",
+      "tittle": "The Song",
+      "date": "2026-09-08",
+      "writer": "Kit",
+      "number_of_pages": "1"
+    },
+    {
+      "chapter_id": "12",
+      "v_id": "1",
+      "chapter_number": "12",
+      "tittle": "The Surprise",
+      "date": "2026-09-11",
+      "writer": "Lux",
+      "number_of_pages": "1"
+    },
+    {
+      "chapter_id": "13",
+      "v_id": "1",
+      "chapter_number": "13",
+      "tittle": "Meeting",
+      "date": "2026-09-11",
+      "writer": "Kit",
+      "number_of_pages": "1"
+    },
+    {
+      "chapter_id": "14",
+      "v_id": "1",
+      "chapter_number": "14",
+      "tittle": "Bald Spot",
+      "date": "2026-09-16",
+      "writer": "Kit",
+      "number_of_pages": "3"
+    },
+    {
+      "chapter_id": "15",
+      "v_id": "1",
+      "chapter_number": "15",
+      "tittle": "First Kiss",
+      "date": "2026-09-13",
+      "writer": "Kit",
+      "number_of_pages": "1"
+    },
+    {
+      "chapter_id": "16",
+      "v_id": null,
+      "chapter_number": null,
+      "tittle": null,
+      "date": null,
+      "writer": null,
+      "number_of_pages": null
+    },
+    {
+      "chapter_id": "17",
+      "v_id": "2",
+      "chapter_number": "1",
+      "tittle": "Hot Pot",
+      "date": "2026-09-17",
+      "writer": "Lux",
+      "number_of_pages": "3"
+    },
+    {
+      "chapter_id": "18",
+      "v_id": "2",
+      "chapter_number": "2",
+      "tittle": "Pool Episode",
+      "date": "2026-09-18",
+      "writer": "Lux",
+      "number_of_pages": "3"
+    },
+    {
+      "chapter_id": "19",
+      "v_id": "2",
+      "chapter_number": "3",
+      "tittle": "Girls Night",
+      "date": "2026-09-23",
+      "writer": "Kit",
+      "number_of_pages": "1"
+    },
+    {
+      "chapter_id": "20",
+      "v_id": "2",
+      "chapter_number": "4",
+      "tittle": "Rhythm game",
+      "date": "2026-09-23",
+      "writer": "Kit",
+      "number_of_pages": "1"
+    },
+    {
+      "chapter_id": "21",
+      "v_id": null,
+      "chapter_number": null,
+      "tittle": null,
+      "date": null,
+      "writer": null,
+      "number_of_pages": null
+    },
+    {
+      "chapter_id": "22",
+      "v_id": "3",
+      "chapter_number": "1",
+      "tittle": "Gambling Time",
+      "date": "2026-09-07",
+      "writer": "Lux",
+      "number_of_pages": "3"
+    },
+    {
+      "chapter_id": "23",
+      "v_id": "3",
+      "chapter_number": "2",
+      "tittle": "Green Hell",
+      "date": "2026-09-11",
+      "writer": "Lux",
+      "number_of_pages": "3"
+    },
+    {
+      "chapter_id": "24",
+      "v_id": "3",
+      "chapter_number": "3",
+      "tittle": "Hell Kitchen",
+      "date": "2026-09-21",
+      "writer": "Lux",
+      "number_of_pages": "3"
+    },
+    {
+      "chapter_id": "25",
+      "v_id": "3",
+      "chapter_number": "4",
+      "tittle": "A needle on Hai",
+      "date": "2026-09-25",
+      "writer": "Lux",
+      "number_of_pages": "3"
+    },
+    {
+      "chapter_id": "26",
+      "v_id": "3",
+      "chapter_number": "5",
+      "tittle": "Street Smart",
+      "date": "2026-09-28",
+      "writer": "Lux",
+      "number_of_pages": "3"
+    },
+    {
+      "chapter_id": "27",
+      "v_id": null,
+      "chapter_number": null,
+      "tittle": null,
+      "date": null,
+      "writer": null,
+      "number_of_pages": null
+    },
+    {
+      "chapter_id": "28",
+      "v_id": "4",
+      "chapter_number": "1",
+      "tittle": "When he is sad",
+      "date": "2026-10-01",
+      "writer": "Lux",
+      "number_of_pages": "1"
+    },
+    {
+      "chapter_id": "29",
+      "v_id": null,
+      "chapter_number": null,
+      "tittle": null,
+      "date": null,
+      "writer": null,
+      "number_of_pages": null
+    },
+    {
+      "chapter_id": "30",
+      "v_id": "5",
+      "chapter_number": "1",
+      "tittle": "Intro ",
+      "date": "2026-10-02",
+      "writer": "Lux",
+      "number_of_pages": "3"
+    },
+    {
+      "chapter_id": "31",
+      "v_id": "5",
+      "chapter_number": "2",
+      "tittle": "characters ",
+      "date": "2026-10-02",
+      "writer": "Lux",
+      "number_of_pages": "3"
+    },
+    {
+      "chapter_id": "32",
+      "v_id": "5",
+      "chapter_number": "3",
+      "tittle": "infiltrated",
+      "date": "2026-10-04",
+      "writer": "Lux",
+      "number_of_pages": "3"
+    },
+    {
+      "chapter_id": "33",
+      "v_id": "5",
+      "chapter_number": "4",
+      "tittle": "Bolt's day ",
+      "date": "2026-10-05",
+      "writer": "Lux",
+      "number_of_pages": "3"
+    },
+    {
+      "chapter_id": "34",
+      "v_id": "5",
+      "chapter_number": "5",
+      "tittle": "Revolution",
+      "date": "10/6/26",
+      "writer": "Lux",
+      "number_of_pages": "3"
+    },
+    {
+      "chapter_id": "35",
+      "v_id": "5",
+      "chapter_number": "6",
+      "tittle": "Dads story",
+      "date": "10/7/26",
+      "writer": "Lux",
+      "number_of_pages": "3"
+    },
+    {
+      "chapter_id": "36",
+      "v_id": "5",
+      "chapter_number": "7",
+      "tittle": "Deadlock night",
+      "date": "10/8/26",
+      "writer": "Lux",
+      "number_of_pages": "3"
+    },
+    {
+      "chapter_id": "37",
+      "v_id": "5",
+      "chapter_number": "8",
+      "tittle": "Leo's lost key",
+      "date": "10/9/26",
+      "writer": "Lux",
+      "number_of_pages": "3"
+    },
+    {
+      "chapter_id": "38",
+      "v_id": "5",
+      "chapter_number": "9",
+      "tittle": "Uni Stress",
+      "date": "10/10/26",
+      "writer": "Lux",
+      "number_of_pages": "3"
+    },
+    {
+      "chapter_id": "39",
+      "v_id": null,
+      "chapter_number": null,
+      "tittle": null,
+      "date": null,
+      "writer": null,
+      "number_of_pages": null
+    },
+    {
+      "chapter_id": "40",
+      "v_id": "6",
+      "chapter_number": "1",
+      "tittle": "A little gift for you",
+      "date": "2026-10-14",
+      "writer": "Lux",
+      "number_of_pages": "1"
+    }
+  ]
 }

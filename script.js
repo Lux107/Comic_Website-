@@ -54,55 +54,53 @@ fetch("data/comic.json")
         }, 10000);
 
 
-        // Recent Chapters
-
-        const recentChapters =
-            document.getElementById("recentChapters");
-
-        const latestChapters =
-            data.chapters
-                .sort((a, b) =>
-                    new Date(b.date) - new Date(a.date)
-                )
-                .slice(0, 3);
-
-
-        latestChapters.forEach(chapter => {
-
-            const chapterElement =
-                document.createElement("div");
-
-            chapterElement.classList.add("recentChapter");
-
-            chapterElement.innerHTML = `
-        <a href="reader.html?chapter=${chapter.chapter_id}">
-            <h3>${chapter.tittle}</h3>
-            <p>${chapter.date}</p>
-        </a>
-    `;
-
-            recentChapters.appendChild(chapterElement);
-
-        });
-
-
-        // Description
-        document.getElementById("description").textContent =
-            data.comic.description;
-
- 
-
-   
-
         
-    })
+
+
+// Recent Chapters
+
+const recentChapters =
+    document.getElementById("recentChapters");
+
+const latestChapters =
+    [...data.chapters]
+        .filter(chapter => chapter.v_id && chapter.date)
+        .sort((a, b) =>
+            new Date(b.date) - new Date(a.date)
+        )
+        .slice(0, 3);
+
+latestChapters.forEach(chapter => {
+
+    const chapterElement =
+        document.createElement("div");
+
+    chapterElement.classList.add("recentChapter");
+
+    // Find the volume this chapter belongs to
+    const volume = data.volumes.find(
+        volume => volume.id == chapter.v_id
+    );
+
+    // Get the type (Comic or Written)
+    const type = volume?.Type || "Comic";
+
+    chapterElement.innerHTML = `
+    <a href="reader.html?chapter=${chapter.chapter_id}">
+        <h3>${chapter.tittle}</h3>
+        <p>${chapter.date}</p>
+        <span class="chapterType ${type.toLowerCase()}">${type}</span>
+    </a>
+`;
+
+    recentChapters.appendChild(chapterElement);
+
+});
+
+    }) // Closes .then(data => { ... })
     .catch(error => {
         console.error("Error loading comic data:", error);
     });
-
-
-
-
 
 // ==========================
 // VOLUME SELECTOR
@@ -575,106 +573,87 @@ function displayChapters() {
 // COMIC READER
 // ==========================
 
-let currentChapter = null;
 
+let currentChapter = null;
+let currentVolume = null;
 let currentPage = 0;
+let writtenPages = [];
+
 
 
 // Load reader
 function loadReader() {
 
-    const comicPage =
-        document.getElementById("comicPage");
+    const comicPage = document.getElementById("comicPage");
 
-
-    // If we're not on reader.html
     if (!comicPage) {
         return;
     }
 
+    const urlParams = new URLSearchParams(window.location.search);
+    const chapterId = urlParams.get("chapter");
 
-    // Get chapter ID from URL
-    const urlParams =
-        new URLSearchParams(window.location.search);
-
-
-    const chapterId =
-        urlParams.get("chapter");
-
-
-    // If no chapter was selected
     if (!chapterId) {
-
         document.getElementById("readerTitle").textContent =
             "No chapter selected.";
-
         return;
-
     }
 
-
-    console.log(
-        "Selected chapter:",
-        chapterId
-    );
-
-
-    // Load database
     fetch("data/comic.json")
-
-        .then(response => response.json())
-
+        .then(response => {
+            if (!response.ok) {
+                throw new Error("Could not load comic.json");
+            }
+            return response.json();
+        })
         .then(data => {
 
             // Find chapter
-            currentChapter =
-                data.chapters.find(
-                    chapter =>
-                        chapter.chapter_id == chapterId
-                );
+            currentChapter = data.chapters.find(
+                chapter => chapter.chapter_id == chapterId
+            );
 
-
-            // Chapter doesn't exist
             if (!currentChapter) {
-
                 document.getElementById("readerTitle").textContent =
                     "Chapter not found.";
-
                 return;
-
             }
 
+            // Find the volume belonging to this chapter
+            currentVolume = data.volumes.find(
+                volume => volume.id == currentChapter.v_id
+            );
 
-            // Show chapter title
+            if (!currentVolume) {
+                document.getElementById("readerTitle").textContent =
+                    "Volume not found.";
+                return;
+            }
+
             document.getElementById("readerTitle").textContent =
                 "Chapter " +
                 currentChapter.chapter_number +
                 ": " +
                 currentChapter.tittle;
 
-
-            // Start at page 1
             currentPage = 0;
 
-
-            // Show page
-            showPage();
+            // Choose the reader using the volume Type
+            if (currentVolume.Type.toLowerCase() === "written") {
+                loadWrittenStory();
+            } else {
+                showPage();
+            }
 
         })
-
         .catch(error => {
-
-            console.error(
-                "Error loading reader:",
-                error
-            );
-
+            console.error("Error loading reader:", error);
+            document.getElementById("readerTitle").textContent =
+                "Could not load chapter.";
         });
-
 }
-
 // ==========================
-// GET PAGE PATH
+// GET COMIC PAGE PATH
 // ==========================
 
 function getPagePath(chapter, pageNumber) {
@@ -688,6 +667,117 @@ function getPagePath(chapter, pageNumber) {
         ").png";
 }
 
+// ==========================
+// LOAD WRITTEN STORY
+// ==========================
+
+function loadWrittenStory() {
+
+    const comicPage = document.getElementById("comicPage");
+    const writtenPage = document.getElementById("writtenPage");
+
+    comicPage.style.display = "none";
+    writtenPage.style.display = "block";
+
+    // One TXT file per chapter
+    const textPath =
+        "stories/volume" +
+        currentChapter.v_id +
+        "/chapter" +
+        currentChapter.chapter_number +
+        ".txt";
+
+    fetch(textPath)
+        .then(response => {
+            if (!response.ok) {
+                throw new Error("Could not load " + textPath);
+            }
+            return response.text();
+        })
+        .then(text => {
+
+            // Split the story into readable pages
+            writtenPages = paginateText(text, 1800);
+
+            if (writtenPages.length === 0) {
+                writtenPages = ["This story is empty."];
+            }
+
+            currentPage = 0;
+            showPage();
+
+        })
+        .catch(error => {
+            console.error("Error loading story:", error);
+            writtenPage.textContent =
+                "Could not load this story. Check the TXT file path.";
+            document.getElementById("pageNumber").textContent = "";
+        });
+}
+
+// ==========================
+// DIVIDE TEXT INTO PAGES
+// ==========================
+
+function paginateText(text, maxChars) {
+
+    const paragraphs = text.trim().split(/\n\s*\n/);
+    const pages = [];
+    let page = "";
+
+    paragraphs.forEach(paragraph => {
+
+        paragraph = paragraph.trim();
+
+        if (!paragraph) {
+            return;
+        }
+
+        // Split extra-long paragraphs at word boundaries
+        const words = paragraph.split(/\s+/);
+        let part = "";
+
+        words.forEach(word => {
+
+            if (part && (part.length + word.length + 1 > maxChars)) {
+
+                // Add the completed part to the current page
+                if (page && page.length + part.length + 2 > maxChars) {
+                    pages.push(page);
+                    page = "";
+                }
+
+                page += (page ? "\n\n" : "") + part;
+                pages.push(page);
+                page = "";
+                part = word;
+
+            } else {
+                part += (part ? " " : "") + word;
+            }
+
+        });
+
+        if (part) {
+
+            if (page && page.length + part.length + 2 > maxChars) {
+                pages.push(page);
+                page = "";
+            }
+
+            page += (page ? "\n\n" : "") + part;
+        }
+
+    });
+
+    if (page) {
+        pages.push(page);
+    }
+
+    return pages;
+}
+
+
 
 // ==========================
 // SHOW CURRENT PAGE
@@ -695,47 +785,63 @@ function getPagePath(chapter, pageNumber) {
 
 function showPage() {
 
-    // Make sure a chapter exists
-    if (!currentChapter) {
+    if (!currentChapter || !currentVolume) {
         return;
     }
 
-    const comicPage =
-        document.getElementById("comicPage");
+    const comicPage = document.getElementById("comicPage");
+    const writtenPage = document.getElementById("writtenPage");
+    const pageNumber = document.getElementById("pageNumber");
 
-    const pageNumber =
-        document.getElementById("pageNumber");
+    // WRITTEN STORY
+    if (currentVolume.Type.toLowerCase() === "written") {
 
-    const totalPages =
-        Number(currentChapter.number_of_pages);
+        const totalPages = writtenPages.length;
 
+        if (currentPage < 0 || currentPage >= totalPages) {
+            return;
+        }
 
-    // Make sure the page exists
+        comicPage.style.display = "none";
+        writtenPage.style.display = "block";
+
+        // textContent safely displays the story as text
+        writtenPage.textContent = writtenPages[currentPage];
+
+        pageNumber.textContent =
+            "Page " + (currentPage + 1) + " / " + totalPages;
+
+        return;
+    }
+
+    // COMIC
+    const totalPages = Number(currentChapter.number_of_pages);
+
     if (currentPage < 0 || currentPage >= totalPages) {
         return;
     }
 
+    writtenPage.style.display = "none";
+    comicPage.style.display = "block";
 
-    // Create the page path automatically
-    const pagePath =
-        getPagePath(
-            currentChapter,
-            currentPage + 1
-        );
+    comicPage.src = getPagePath(currentChapter, currentPage + 1);
 
-
-    // Show image
-    comicPage.src = pagePath;
-
-
-    // Show page number
     pageNumber.textContent =
-        "Page " +
-        (currentPage + 1) +
-        " / " +
-        totalPages;
+        "Page " + (currentPage + 1) + " / " + totalPages;
 }
 
+// ==========================
+// GET TOTAL PAGES
+// ==========================
+
+function getTotalPages() {
+
+    if (currentVolume.Type.toLowerCase() === "written") {
+        return writtenPages.length;
+    }
+
+    return Number(currentChapter.number_of_pages);
+}
 
 // ==========================
 // NEXT PAGE
@@ -743,22 +849,17 @@ function showPage() {
 
 function nextPage() {
 
-    if (!currentChapter) {
+    if (!currentChapter || !currentVolume) {
         return;
     }
 
-    const totalPages =
-        Number(currentChapter.number_of_pages);
-
+    const totalPages = getTotalPages();
 
     if (currentPage < totalPages - 1) {
-
         currentPage++;
-
         showPage();
     }
 }
-
 
 
 // ==========================
@@ -767,15 +868,12 @@ function nextPage() {
 
 function previousPage() {
 
-    if (!currentChapter) {
+    if (!currentChapter || !currentVolume) {
         return;
     }
 
-
     if (currentPage > 0) {
-
         currentPage--;
-
         showPage();
     }
 }
@@ -987,4 +1085,3 @@ loadChapters();
 
 
 
-// SHOW CURRENT PAGE
