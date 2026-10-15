@@ -57,7 +57,7 @@
       {
         "id": "5",
         "title": "Lux Tales V1",
-        "total_chapters": "9",
+        "total_chapters": "10",
         "cover": "images/volume5.png",
         "finished": "FALSE",
         "Type": "Comic"
@@ -418,15 +418,16 @@
     },
     {
       "chapter_id": "39",
-      "v_id": null,
-      "chapter_number": null,
-      "tittle": null,
-      "date": null,
-      "writer": null,
-      "number_of_pages": null
+      "v_id": "5",
+      "chapter_number": "10",
+      "tittle": "Lux Adventures",
+      "date": "10/15/26",
+      "writer": "Lux",
+      "number_of_pages": "3"
     },
+   
     {
-      "chapter_id": "40",
+      "chapter_id": "41",
       "v_id": "6",
       "chapter_number": "1",
       "tittle": "A little gift for you",
@@ -434,5 +435,7 @@
       "writer": "Lux",
       "number_of_pages": "1"
     }
+
+
   ]
 }
