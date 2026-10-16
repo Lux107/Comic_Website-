@@ -57,7 +57,7 @@
       {
         "id": "5",
         "title": "Lux Tales V1",
-        "total_chapters": "10",
+        "total_chapters": "11",
         "cover": "images/volume5.png",
         "finished": "FALSE",
         "Type": "Comic"
@@ -425,9 +425,18 @@
       "writer": "Lux",
       "number_of_pages": "3"
     },
-   
+
     {
-      "chapter_id": "41",
+      "chapter_id": "40",
+      "v_id": "5",
+      "chapter_number": "11",
+      "tittle": "Family TIme",
+      "date": "10/16/26",
+      "writer": "Lux",
+      "number_of_pages": "3"
+    },
+    {
+      "chapter_id": "42",
       "v_id": "6",
       "chapter_number": "1",
       "tittle": "A little gift for you",
