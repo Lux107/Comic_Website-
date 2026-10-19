@@ -57,7 +57,7 @@
       {
         "id": "5",
         "title": "Lux Tales V1",
-        "total_chapters": "11",
+        "total_chapters": "13",
         "cover": "images/volume5.png",
         "finished": "FALSE",
         "Type": "Comic"
@@ -441,6 +441,15 @@
       "chapter_number": "12",
       "tittle": "What is my driver doing...",
       "date": "10/17/26",
+      "writer": "Lux",
+      "number_of_pages": "3"
+    },
+    {
+      "chapter_id": "42",
+      "v_id": "5",
+      "chapter_number": "13",
+      "tittle": "Halloween Stores",
+      "date": "10/19/26",
       "writer": "Lux",
       "number_of_pages": "3"
     },
