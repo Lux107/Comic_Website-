@@ -57,7 +57,7 @@
       {
         "id": "5",
         "title": "Lux Tales V1",
-        "total_chapters": "14",
+        "total_chapters": "15",
         "cover": "images/volume5.png",
         "finished": "FALSE",
         "Type": "Comic"
@@ -463,6 +463,16 @@
       "number_of_pages": "3"
     },
     {
+      "chapter_id": "44",
+      "v_id": "5",
+      "chapter_number": "15",
+      "tittle": "The Prize",
+      "date": "10/21/26",
+      "writer": "Lux",
+      "number_of_pages": "3"
+    },
+    {
+
       "chapter_id": "45",
       "v_id": "6",
       "chapter_number": "1",
