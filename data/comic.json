@@ -276,10 +276,10 @@
       "chapter_id": "23",
       "v_id": "2",
       "chapter_number": "7",
-      "tittle": null,
-      "date": null,
+      "tittle": "Chicken Rice",
+      "date": "11/2/26",
       "writer": "Lux",
-      "number_of_pages": null
+      "number_of_pages": "3"
     },
     {
       "chapter_id": "24",
@@ -288,7 +288,7 @@
       "tittle": null,
       "date": null,
       "writer": "Lux",
-      "number_of_pages": null
+      "number_of_pages": "3"
     },
     {
       "chapter_id": "25",
